@@ -5,11 +5,12 @@
 
 * {
   font-family: "Asta Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 /* Configuración simple para dark mode */
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #d1d5db;
   --text-color: #1a1a1a;
   --border-color: #6b7280;
   --hover-color: #9ca3af;
@@ -49,11 +50,11 @@
 }
 
 :root.dark {
-  --bg-color: #1a1a1a;
-  --text-color: #f3f4f6;
+  --bg-color: #030712;
+  --text-color: #f4f4f5;
   --border-color: #4b5563;
   --hover-color: #6b7280;
-  --accent-color: #001b38;
+  --accent-color: #2dd4bf;
 }
 
 body {
@@ -81,6 +82,7 @@ body {
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-color: var(--accent-color);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
