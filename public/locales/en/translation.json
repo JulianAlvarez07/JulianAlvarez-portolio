@@ -1,11 +1,76 @@
 {
-  "welcome": "Welcome!",
-  "description": "This is a simple app.",
   "home": "Home",
   "about": "About",
-  "contact": "Contact",
   "projects": "Projects",
   "skills": "Skills",
-  "experience": "Experience",
-  "education": "Education"
+  "hero": {
+    "greeting": "Hi! My name is",
+    "role": "Front-End Developer",
+    "description": "Passionate about creating modern, functional and user-centered web experiences.",
+    "education_status": "Final year student of Programming Technician at the University of Hurlingham.",
+    "download_cv": "Download CV",
+    "alt_profile": "Julian Alvarez"
+  },
+  "about_section": {
+    "title": "ABOUT ME",
+    "greeting": "Hi! I'm Julian",
+    "alt_image": "Julian Alvarez",
+    "paragraph1": "I'm currently 22 years old and I'm finishing my Full Stack Programming University Technician degree at the National University of Hurlingham, a career I started in March 2022.",
+    "paragraph2": "Throughout the technical degree, I acquired knowledge in both front-end and back-end development, but recently I decided to focus mainly on front-end development, specializing in React and creating modern, responsive interfaces centered on user experience.",
+    "paragraph3": "I'm passionate about solving problems with code, learning new technologies, and collaborating on real projects that generate impact. I'm looking for my first professional experience as a front-end developer, where I can contribute my skills and continue growing as part of a team.",
+    "location_title": "Location",
+    "location": "Argentina",
+    "email_title": "Email",
+    "email": "alvarezjuli30@email.com",
+    "experience_title": "Programming Experience",
+    "experience": "4+ years",
+    "status_title": "Status",
+    "status": "Available"
+  },
+  "skills_section": {
+    "title": "SKILLS",
+    "technical": "TECHNICAL",
+    "soft": "SOFT",
+    "categories": {
+      "frontend": "FRONT-END",
+      "backend": "BACK-END",
+      "database": "DATABASES",
+      "tools": "OTHER TOOLS"
+    },
+    "soft_skills": [
+      "Effective communication and teamwork",
+      "Active listening",
+      "Autonomous and continuous learning",
+      "Adaptability to change",
+      "Personal responsibility and academic commitment",
+      "Analytical thinking and solution-focused"
+    ]
+  },
+  "projects_section": {
+    "title": "MY PROJECTS",
+    "project_card": {
+      "technologies": "Technologies:",
+      "view_project": "View project",
+      "github": "GitHub"
+    },
+    "projects": [
+      {
+        "title": "Gym Control",
+        "description": "A web app to create, edit and track workout routines in a simple and effective way."
+      },
+      {
+        "title": "Game: Connect 4",
+        "description": "Interactive version of Connect 4 made with React. I practiced states, components, game logic and animations to create a smooth and fun experience."
+      },
+      {
+        "title": "Landing Page",
+        "description": "Basic landing page for a company selling a specific product."
+      }
+    ]
+  },
+  "contact_section": {
+    "title": "CONTACT",
+    "copied": "Copied!",
+    "cta": "Interested in working together? Let's talk!"
+  }
 }

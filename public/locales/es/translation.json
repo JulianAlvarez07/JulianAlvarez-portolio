@@ -1,11 +1,76 @@
 {
-  "welcome": "¡Bienvenido!",
-  "description": "Esta es una app sencilla.",
   "home": "Inicio",
   "about": "Acerca de",
-  "contact": "Contacto",
   "projects": "Proyectos",
   "skills": "Habilidades",
-  "experience": "Experiencia",
-  "education": "Educación"
+  "hero": {
+    "greeting": "¡Hola! Mi nombre es",
+    "role": "Desarrollador Front-End",
+    "description": "Apasionado por crear experiencias web modernas, funcionales y centradas en el usuario.",
+    "education_status": "Estudiante en el último año de la Tecnicatura en Programación en la Universidad de Hurlingham.",
+    "download_cv": "Descargar CV",
+    "alt_profile": "Julian Alvarez"
+  },
+  "about_section": {
+    "title": "SOBRE MÍ",
+    "greeting": "¡Hola! Soy Julian",
+    "alt_image": "Julian Alvarez",
+    "paragraph1": "Actualmente tengo 22 años y estoy finalizando la Tecnicatura Universitaria en Programación Full Stack en la Universidad Nacional de Hurlingham, carrera que comencé en marzo de 2022.",
+    "paragraph2": "A lo largo de la tecnicatura adquirí conocimientos tanto del desarrollo front-end como back-end, pero en este último tiempo decidí enfocarme principalmente en el desarrollo front-end, especializándome en react y en la creación de interfaces modernas, responsivas y centradas en la experiencia de usuario.",
+    "paragraph3": "Me apasiona resolver problemas con código, aprender tecnologías nuevas y colaborar en proyectos reales que generen impacto. Estoy en búsqueda de mi primera experiencia profesional como desarrollador front-end, donde pueda aportar mis habilidades y seguir creciendo en equipo.",
+    "location_title": "Ubicación",
+    "location": "Argentina",
+    "email_title": "Email",
+    "email": "alvarezjuli30@email.com",
+    "experience_title": "Experiencia programando",
+    "experience": "4+ años",
+    "status_title": "Estado",
+    "status": "Disponible"
+  },
+  "skills_section": {
+    "title": "HABILIDADES",
+    "technical": "TÉCNICAS",
+    "soft": "BLANDAS",
+    "categories": {
+      "frontend": "FRONT-END",
+      "backend": "BACK-END",
+      "database": "BASE DE DATOS",
+      "tools": "OTRAS HERRAMIENTAS"
+    },
+    "soft_skills": [
+      "Comunicación efectiva y trabajo en equipo",
+      "Escucha activa",
+      "Aprendizaje autónomo y continuo",
+      "Adaptabilidad al cambio",
+      "Responsabilidad personal y compromiso académico",
+      "Pensamiento analítico y enfoque en soluciones"
+    ]
+  },
+  "projects_section": {
+    "title": "MIS PROYECTOS",
+    "project_card": {
+      "technologies": "Tecnologías:",
+      "view_project": "Ver proyecto",
+      "github": "GitHub"
+    },
+    "projects": [
+      {
+        "title": "Gym Control",
+        "description": "Una app web para crear, editar y seguir rutinas de entrenamiento de forma simple y efectiva."
+      },
+      {
+        "title": "Game: Connect 4",
+        "description": "Versión interactiva de Connect 4 hecha con React. Practiqué estados, componentes, lógica de juego y animaciones para crear una experiencia fluida y divertida."
+      },
+      {
+        "title": "Landing Page",
+        "description": "Landing page basica para una empresa de venta de un producto especifico."
+      }
+    ]
+  },
+  "contact_section": {
+    "title": "CONTACTO",
+    "copied": "¡Copiado!",
+    "cta": "¿Interesado en trabajar juntos? ¡Hablemos!"
+  }
 }

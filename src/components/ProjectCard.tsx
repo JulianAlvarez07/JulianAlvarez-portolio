@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface Technology {
   name: string;
@@ -31,8 +32,10 @@ const ProjectCard = ({
   liveUrl,
   githubUrl,
 }: ProjectCardProps) => {
+  const { t } = useTranslation();
+
   return (
-    <Card className="w-full max-w-sm overflow-hidden">
+    <Card className="w-full max-w-sm overflow-hidden bg-color border border-gray-200 dark:border-gray-700">
       {/* Imagen del proyecto */}
       <div className="aspect-video overflow-hidden">
         <img
@@ -52,7 +55,7 @@ const ProjectCard = ({
         {/* Tecnologías */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-muted-foreground">
-            Tecnologías:
+            {t("projects_section.project_card.technologies")}
           </p>
           <div className="flex flex-wrap gap-2">
             {technologies.map((tech, index) => (
@@ -78,7 +81,7 @@ const ProjectCard = ({
             onClick={() => window.open(liveUrl, "_blank")}
           >
             <ExternalLink className="w-4 h-4" />
-            Ver proyecto
+            {t("projects_section.project_card.view_project")}
           </Button>
         )}
         {githubUrl && (
@@ -89,7 +92,7 @@ const ProjectCard = ({
             onClick={() => window.open(githubUrl, "_blank")}
           >
             <Github className="w-4 h-4" />
-            GitHub
+            {t("projects_section.project_card.github")}
           </Button>
         )}
       </CardFooter>
