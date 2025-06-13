@@ -76,7 +76,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3"
+          className="border-2 border-[#007bff] dark:border-[#164e63] rounded-lg p-3"
         >
           <h3 className="text-xl lg:text-2xl font-semibold text-center mb-3 font-mono">
             {t("skills_section.technical")}
@@ -84,7 +84,9 @@ const Skills = () => {
 
           {Object.entries(technicalSkills).map(([category, skills]) => (
             <div key={category} className="mb-3">
-              <h4 className="text-sm font-medium mb-1.5">{category}</h4>
+              <h4 className="text-sm font-medium mb-1.5 underline">
+                {category}
+              </h4>
               <div className="grid grid-cols-3 gap-1.5">
                 {skills.map((skill, index) => {
                   const IconComponent = skill.icon;
@@ -110,7 +112,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="border-2 border-gray-300 dark:border-gray-600 rounded-lg p-3"
+          className="border-2 border-[#007bff] dark:border-[#164e63] rounded-lg p-3"
         >
           <h3 className="text-xl lg:text-2xl font-semibold text-center mb-3">
             {t("skills_section.soft")}

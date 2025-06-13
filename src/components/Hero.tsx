@@ -50,7 +50,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-base lg:text-lg text-gray-600 dark:text-gray-300 mb-3 leading-relaxed"
+              className="text-base lg:text-lg text-gray-700 dark:text-gray-300 mb-3 leading-relaxed"
             >
               {t("hero.description")}
             </motion.p>
@@ -58,7 +58,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-sm lg:text-base text-gray-500 dark:text-gray-400 mb-8 leading-relaxed"
+              className="text-sm lg:text-base text-gray-600 dark:text-gray-400 mb-8 leading-relaxed"
             >
               {t("hero.education_status")}
             </motion.p>
@@ -70,7 +70,10 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-3"
             >
               {/* Botón destacado de CV */}
-              <Button className="cursor-pointer bg-accent-color hover:bg-accent-color/90 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex-1 sm:flex-none">
+              <Button
+                className="cursor-pointer bg-accent-color hover:bg-accent-color/90 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex-1 sm:flex-none transform hover:scale-105"
+                onClick={() => window.open("/JulianAlvarezCV.pdf", "_blank")}
+              >
                 <Download className="w-4 h-4 mr-2" />
                 {t("hero.download_cv")}
               </Button>

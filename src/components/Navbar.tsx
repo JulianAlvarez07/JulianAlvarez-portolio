@@ -68,7 +68,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href.slice(1))}
-              className="hover:text-blue-400 transition-colors whitespace-nowrap"
+              className="hover:text-accent-color transition-colors whitespace-nowrap"
             >
               {link.text}
             </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="fixed top-4 right-4 z-50 md:hidden">
+      <div className="fixed top-4 right-8 z-50 md:hidden">
         <button
           onClick={toggleMobileMenu}
           className="p-3 border border-gray-400 rounded-full bg-gray-900/90 backdrop-blur-sm text-gray-100 shadow-lg hover:bg-gray-800 transition-colors"

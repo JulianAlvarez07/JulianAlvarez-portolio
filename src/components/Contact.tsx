@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaReact } from "react-icons/fa";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <section className="py-8 bg-color border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        <h2 className="text-4xl font-bold mb-4 lg:mb-12 text-[#262626] dark:text-[#ffedd5] text-center">
+        <h2 className="text-4xl font-bold mb-4 lg:mb-8 text-[#262626] dark:text-[#ffedd5] text-center">
           {t("contact_section.title")}
         </h2>
 
@@ -59,6 +59,16 @@ const Contact = () => {
           <p className="text-gray-600 text-center">
             {t("contact_section.cta")}
           </p>
+          <div>
+            <p className="text-center text-sm">
+              &copy; {new Date().getFullYear()} Julian Alvarez.{" "}
+              {t("footer.copyright")}
+            </p>
+            <p className="flex items-center justify-center text-center text-sm">
+              {t("footer.built_with")}{" "}
+              <FaReact className="text-blue-500 ml-2" />
+            </p>
+          </div>
         </div>
       </div>
     </section>

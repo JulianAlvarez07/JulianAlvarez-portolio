@@ -4,7 +4,7 @@
   "projects": "Proyectos",
   "skills": "Habilidades",
   "hero": {
-    "greeting": "¡Hola! Mi nombre es",
+    "greeting": "¡Bienvenido! Mi nombre es",
     "role": "Desarrollador Front-End",
     "description": "Apasionado por crear experiencias web modernas, funcionales y centradas en el usuario.",
     "education_status": "Estudiante en el último año de la Tecnicatura en Programación en la Universidad de Hurlingham.",
@@ -12,30 +12,35 @@
     "alt_profile": "Julian Alvarez"
   },
   "about_section": {
-    "title": "SOBRE MÍ",
-    "greeting": "¡Hola! Soy Julian",
-    "alt_image": "Julian Alvarez",
-    "paragraph1": "Actualmente tengo 22 años y estoy finalizando la Tecnicatura Universitaria en Programación Full Stack en la Universidad Nacional de Hurlingham, carrera que comencé en marzo de 2022.",
-    "paragraph2": "A lo largo de la tecnicatura adquirí conocimientos tanto del desarrollo front-end como back-end, pero en este último tiempo decidí enfocarme principalmente en el desarrollo front-end, especializándome en react y en la creación de interfaces modernas, responsivas y centradas en la experiencia de usuario.",
-    "paragraph3": "Me apasiona resolver problemas con código, aprender tecnologías nuevas y colaborar en proyectos reales que generen impacto. Estoy en búsqueda de mi primera experiencia profesional como desarrollador front-end, donde pueda aportar mis habilidades y seguir creciendo en equipo.",
+    "title": "Sobre mí",
+    "greeting": "¡Hola! Soy Julián",
+    "paragraph1": "Actualmente tengo 22 años y estoy finalizando la {degree} en la {university}, carrera que comencé en marzo de 2022.",
+    "paragraph2": "A lo largo de la tecnicatura adquirí conocimientos tanto del desarrollo front-end como back-end, pero en este último tiempo decidí enfocarme principalmente en el {frontend}, especializándome en {react} y en la creación de interfaces modernas, responsivas y centradas en la experiencia de usuario.",
+    "paragraph3": "Me apasiona resolver problemas con código, aprender tecnologías nuevas y colaborar en proyectos reales que generen impacto. Estoy en búsqueda de mi {first_job}, donde pueda aportar mis habilidades y seguir creciendo en equipo.",
+    "degree": "Tecnicatura Universitaria en Programación Full Stack",
+    "university": "Universidad Nacional de Hurlingham",
+    "frontend": "desarrollo front-end",
+    "react": "react",
+    "first_job": "primera experiencia profesional como desarrollador front-end",
     "location_title": "Ubicación",
-    "location": "Argentina",
+    "location": "Buenos Aires, Argentina",
     "email_title": "Email",
-    "email": "alvarezjuli30@email.com",
+    "email": "alvarezjuli30@gmail.com",
     "experience_title": "Experiencia programando",
-    "experience": "4+ años",
+    "experience": "Estudiante",
     "status_title": "Estado",
-    "status": "Disponible"
+    "status": "Disponible",
+    "alt_image": "Foto de Julián"
   },
   "skills_section": {
-    "title": "HABILIDADES",
+    "title": "Habilidades",
     "technical": "TÉCNICAS",
     "soft": "BLANDAS",
     "categories": {
-      "frontend": "FRONT-END",
-      "backend": "BACK-END",
-      "database": "BASE DE DATOS",
-      "tools": "OTRAS HERRAMIENTAS"
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Base de datos",
+      "tools": "Otras herramientas"
     },
     "soft_skills": [
       "Comunicación efectiva y trabajo en equipo",
@@ -47,7 +52,7 @@
     ]
   },
   "projects_section": {
-    "title": "MIS PROYECTOS",
+    "title": "Mis Proyectos",
     "project_card": {
       "technologies": "Tecnologías:",
       "view_project": "Ver proyecto",
@@ -69,8 +74,12 @@
     ]
   },
   "contact_section": {
-    "title": "CONTACTO",
+    "title": "Contacto",
     "copied": "¡Copiado!",
     "cta": "¿Interesado en trabajar juntos? ¡Hablemos!"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados.",
+    "built_with": "Construido con"
   }
 }

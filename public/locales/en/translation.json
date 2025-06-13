@@ -4,7 +4,7 @@
   "projects": "Projects",
   "skills": "Skills",
   "hero": {
-    "greeting": "Hi! My name is",
+    "greeting": "Welcome! My name is",
     "role": "Front-End Developer",
     "description": "Passionate about creating modern, functional and user-centered web experiences.",
     "education_status": "Final year student of Programming Technician at the University of Hurlingham.",
@@ -12,30 +12,35 @@
     "alt_profile": "Julian Alvarez"
   },
   "about_section": {
-    "title": "ABOUT ME",
-    "greeting": "Hi! I'm Julian",
-    "alt_image": "Julian Alvarez",
-    "paragraph1": "I'm currently 22 years old and I'm finishing my Full Stack Programming University Technician degree at the National University of Hurlingham, a career I started in March 2022.",
-    "paragraph2": "Throughout the technical degree, I acquired knowledge in both front-end and back-end development, but recently I decided to focus mainly on front-end development, specializing in React and creating modern, responsive interfaces centered on user experience.",
-    "paragraph3": "I'm passionate about solving problems with code, learning new technologies, and collaborating on real projects that generate impact. I'm looking for my first professional experience as a front-end developer, where I can contribute my skills and continue growing as part of a team.",
+    "title": "About me",
+    "greeting": "Hi! I'm Julián",
+    "paragraph1": "I'm currently 22 years old and I'm finishing my {degree} at {university}, a program I started in March 2022.",
+    "paragraph2": "Throughout my studies, I gained knowledge in both front-end and back-end development, but recently I decided to focus mainly on {frontend}, specializing in {react} and creating modern, responsive interfaces centered on user experience.",
+    "paragraph3": "I'm passionate about solving problems with code, learning new technologies, and collaborating on real projects that make an impact. I'm looking for my {first_job}, where I can contribute my skills and continue growing as part of a team.",
+    "degree": "Full Stack Programming Technical Degree",
+    "university": "National University of Hurlingham",
+    "frontend": "front-end development",
+    "react": "react",
+    "first_job": "first professional experience as a front-end developer",
     "location_title": "Location",
-    "location": "Argentina",
+    "location": "Buenos Aires, Argentina",
     "email_title": "Email",
-    "email": "alvarezjuli30@email.com",
-    "experience_title": "Programming Experience",
-    "experience": "4+ years",
+    "email": "alvarezjuli30@gmail.com",
+    "experience_title": "Experience programming",
+    "experience": "Student",
     "status_title": "Status",
-    "status": "Available"
+    "status": "Available",
+    "alt_image": "Julián's photo"
   },
   "skills_section": {
-    "title": "SKILLS",
+    "title": "Skills",
     "technical": "TECHNICAL",
     "soft": "SOFT",
     "categories": {
-      "frontend": "FRONT-END",
-      "backend": "BACK-END",
-      "database": "DATABASES",
-      "tools": "OTHER TOOLS"
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Databases",
+      "tools": "Other tools"
     },
     "soft_skills": [
       "Effective communication and teamwork",
@@ -47,7 +52,7 @@
     ]
   },
   "projects_section": {
-    "title": "MY PROJECTS",
+    "title": "My Projects",
     "project_card": {
       "technologies": "Technologies:",
       "view_project": "View project",
@@ -69,8 +74,12 @@
     ]
   },
   "contact_section": {
-    "title": "CONTACT",
+    "title": "Contact",
     "copied": "Copied!",
     "cta": "Interested in working together? Let's talk!"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "built_with": "Built with"
   }
 }
