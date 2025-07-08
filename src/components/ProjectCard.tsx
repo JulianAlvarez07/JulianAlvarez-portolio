@@ -35,13 +35,13 @@ const ProjectCard = ({
   const { t } = useTranslation();
 
   return (
-    <Card className="w-full max-w-sm overflow-hidden bg-color border border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+    <Card className="w-full max-w-sm overflow-hidden bg-color border border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-xl">
       {/* Imagen del proyecto */}
       <div className="aspect-video overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
 

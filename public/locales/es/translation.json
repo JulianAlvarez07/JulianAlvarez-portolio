@@ -60,6 +60,10 @@
     },
     "projects": [
       {
+        "title": "Anti-Social",
+        "description": "Proyecto académico Full Stack: Simulación de una red social desarrollada en equipo durante el cuatrimestre. Permite registrarse, iniciar sesión, crear publicaciones, comentarlas y etiquetarlas. La UI está pensada con un enfoque fuerte en experiencia de usuario."
+      },
+      {
         "title": "Gym Control",
         "description": "Una app web para crear, editar y seguir rutinas de entrenamiento de forma simple y efectiva."
       },

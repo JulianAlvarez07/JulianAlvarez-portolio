@@ -1,10 +1,19 @@
 import ProjectCard from "./ProjectCard";
-import { SiReact, SiTypescript, SiTailwindcss, SiFramer } from "react-icons/si";
+import {
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiFramer,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import gymControlImage from "../assets/images/screen-gym.png";
 import connect4Image from "../assets/images/screen-game.png";
 import landingPageImage from "../assets/images/screen-landing.png";
+import antiSocialImage from "../assets/images/screen-antisocial.jpeg";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -12,9 +21,26 @@ const Projects = () => {
   // Datos de ejemplo para los proyectos
   const projects = [
     {
-      image: gymControlImage,
+      image: antiSocialImage,
       title: t("projects_section.projects.0.title"),
       description: t("projects_section.projects.0.description"),
+      technologies: [
+        { name: "React", icon: <SiReact /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "Tailwind", icon: <SiTailwindcss /> },
+        { name: "Framer Motion", icon: <SiFramer /> },
+        { name: "Node.js", icon: <SiNodedotjs /> },
+        { name: "Express", icon: <SiExpress /> },
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+      ],
+      liveUrl: "https://anti-social-loscrudos.netlify.app/",
+      githubUrl:
+        "https://github.com/JulianAlvarez07/Unahur-antisocialred-front",
+    },
+    {
+      image: gymControlImage,
+      title: t("projects_section.projects.1.title"),
+      description: t("projects_section.projects.1.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
@@ -26,8 +52,8 @@ const Projects = () => {
     },
     {
       image: connect4Image,
-      title: t("projects_section.projects.1.title"),
-      description: t("projects_section.projects.1.description"),
+      title: t("projects_section.projects.2.title"),
+      description: t("projects_section.projects.2.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "Tailwind", icon: <SiTailwindcss /> },
@@ -38,8 +64,8 @@ const Projects = () => {
     },
     {
       image: landingPageImage,
-      title: t("projects_section.projects.2.title"),
-      description: t("projects_section.projects.2.description"),
+      title: t("projects_section.projects.3.title"),
+      description: t("projects_section.projects.3.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "Tailwind", icon: <SiTailwindcss /> },

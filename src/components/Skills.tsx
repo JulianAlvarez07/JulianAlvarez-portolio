@@ -69,63 +69,81 @@ const Skills = () => {
         {t("skills_section.title")}
       </motion.h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-4xl mx-auto">
-        {/* Columna de Habilidades Técnicas */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="border-2 border-[#007bff] dark:border-[#164e63] rounded-lg p-3"
-        >
-          <h3 className="text-xl lg:text-2xl font-semibold text-center mb-3 font-mono">
-            {t("skills_section.technical")}
-          </h3>
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Columna de Habilidades Técnicas */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-2 space-y-8"
+          >
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                {t("skills_section.technical")}
+              </h3>
 
-          {Object.entries(technicalSkills).map(([category, skills]) => (
-            <div key={category} className="mb-3">
-              <h4 className="text-sm font-medium mb-1.5 underline">
-                {category}
-              </h4>
-              <div className="grid grid-cols-3 gap-1.5">
-                {skills.map((skill, index) => {
-                  const IconComponent = skill.icon;
-                  return (
-                    <div key={index} className="text-center">
-                      <div className="rounded-lg p-1.5 h-12 flex flex-col items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                        <IconComponent className={`text-xl ${skill.color}`} />
-                        <span className="text-xs font-medium leading-none mt-1">
-                          {skill.name}
-                        </span>
-                      </div>
+              <div className="space-y-8">
+                {Object.entries(technicalSkills).map(([category, skills]) => (
+                  <div key={category} className="space-y-4">
+                    <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 pb-2">
+                      {category}
+                    </h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                      {skills.map((skill, index) => {
+                        const IconComponent = skill.icon;
+                        return (
+                          <motion.div
+                            key={index}
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center gap-3 bg-gray-50 dark:bg-gray-700 rounded-lg p-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-600"
+                          >
+                            <IconComponent
+                              className={`text-2xl ${skill.color}`}
+                            />
+                            <span className="text-sm font-medium">
+                              {skill.name}
+                            </span>
+                          </motion.div>
+                        );
+                      })}
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </motion.div>
+          </motion.div>
 
-        {/* Columna de Habilidades Blandas */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="border-2 border-[#007bff] dark:border-[#164e63] rounded-lg p-3"
-        >
-          <h3 className="text-xl lg:text-2xl font-semibold text-center mb-3">
-            {t("skills_section.soft")}
-          </h3>
+          {/* Columna de Habilidades Blandas */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
+          >
+            <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+              {t("skills_section.soft")}
+            </h3>
 
-          <ul className="space-y-2 list-disc list-inside mt-4">
-            {softSkills.map((skill, index) => (
-              <li key={index} className="text-base leading-relaxed">
-                {skill}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+            <div className="space-y-4">
+              {softSkills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className="flex items-center gap-3 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 transition-colors hover:bg-gray-100 dark:hover:bg-gray-600"
+                >
+                  <div className="h-2 w-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500" />
+                  <p className="text-sm">{skill}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

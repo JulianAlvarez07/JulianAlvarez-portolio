@@ -60,6 +60,10 @@
     },
     "projects": [
       {
+        "title": "Anti-Social",
+        "description": "Academic Full Stack team project: A social network simulation developed during the semester. Features user registration, login, post creation, comments, and tagging. The UI is designed with a strong focus on user experience."
+      },
+      {
         "title": "Gym Control",
         "description": "A web app to create, edit and track workout routines in a simple and effective way."
       },
