@@ -72,7 +72,7 @@ const Hero = () => {
               {/* Botón destacado de CV */}
               <Button
                 className="cursor-pointer bg-accent-color hover:bg-accent-color/90 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex-1 sm:flex-none transform hover:scale-105"
-                onClick={() => window.open("/julian-alvarez-cv.pdf", "_blank")}
+                onClick={() => window.open("/Julian-Alvarez-cv.pdf", "_blank")}
               >
                 <Download className="w-4 h-4 mr-2" />
                 {t("hero.download_cv")}
@@ -86,7 +86,7 @@ const Hero = () => {
                   className="cursor-pointer flex-1 sm:flex-none"
                   onClick={() =>
                     window.open(
-                      "https://www.linkedin.com/in/julian-alvarez-285882249/"
+                      "https://www.linkedin.com/in/julian-alvarez-285882249/",
                     )
                   }
                 >

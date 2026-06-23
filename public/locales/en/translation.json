@@ -7,14 +7,14 @@
     "greeting": "Welcome! My name is",
     "role": "Front-End Developer",
     "description": "Passionate about creating modern, functional and user-centered web experiences.",
-    "education_status": "Final year student of Programming Technician at the University of Hurlingham.",
+    "education_status": "University Technician in Full Stack Programming at the National University of Hurlingham.",
     "download_cv": "Download CV",
     "alt_profile": "Julian Alvarez"
   },
   "about_section": {
     "title": "About me",
     "greeting": "Hi! I'm Julián",
-    "paragraph1": "I'm currently 22 years old and I'm finishing my {degree} at {university}, a program I started in March 2022.",
+    "paragraph1": "I'm currently 23 years old and I finished my {degree} at {university}, a program I started in March 2022.",
     "paragraph2": "Throughout my studies, I gained knowledge in both front-end and back-end development, but recently I decided to focus mainly on {frontend}, specializing in {react} and creating modern, responsive interfaces centered on user experience.",
     "paragraph3": "I'm passionate about solving problems with code, learning new technologies, and collaborating on real projects that make an impact. I'm looking for my {first_job}, where I can contribute my skills and continue growing as part of a team.",
     "degree": "Full Stack Programming Technical Degree",
@@ -74,6 +74,10 @@
       {
         "title": "Landing Page",
         "description": "Basic landing page for a company selling a specific product."
+      },
+      {
+        "title": "Mito",
+        "description": "Landing page for the recording equipment rental business Mito."
       }
     ]
   },

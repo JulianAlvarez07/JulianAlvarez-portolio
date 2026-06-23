@@ -7,14 +7,14 @@
     "greeting": "¡Bienvenido! Mi nombre es",
     "role": "Desarrollador Front-End",
     "description": "Apasionado por crear experiencias web modernas, funcionales y centradas en el usuario.",
-    "education_status": "Estudiante en el último año de la Tecnicatura en Programación en la Universidad de Hurlingham.",
+    "education_status": "Tecnico Universitario en Programación Full Stack en la Universidad Nacional de Hurlingham.",
     "download_cv": "Descargar CV",
     "alt_profile": "Julian Alvarez"
   },
   "about_section": {
     "title": "Sobre mí",
     "greeting": "¡Hola! Soy Julián",
-    "paragraph1": "Actualmente tengo 22 años y estoy finalizando la {degree} en la {university}, carrera que comencé en marzo de 2022.",
+    "paragraph1": "Actualmente tengo 23 años y finalice la {degree} en la {university}, carrera que comencé en marzo de 2022.",
     "paragraph2": "A lo largo de la tecnicatura adquirí conocimientos tanto del desarrollo front-end como back-end, pero en este último tiempo decidí enfocarme principalmente en el {frontend}, especializándome en {react} y en la creación de interfaces modernas, responsivas y centradas en la experiencia de usuario.",
     "paragraph3": "Me apasiona resolver problemas con código, aprender tecnologías nuevas y colaborar en proyectos reales que generen impacto. Estoy en búsqueda de mi {first_job}, donde pueda aportar mis habilidades y seguir creciendo en equipo.",
     "degree": "Tecnicatura Universitaria en Programación Full Stack",
@@ -74,6 +74,10 @@
       {
         "title": "Landing Page",
         "description": "Landing page basica para una empresa de venta de un producto especifico."
+      },
+      {
+        "title": "Mito",
+        "description": "Landing page para el emprendimiento de alquiler de articulos de grabacion Mito."
       }
     ]
   },

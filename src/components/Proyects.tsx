@@ -14,12 +14,26 @@ import gymControlImage from "../assets/images/screen-gym.png";
 import connect4Image from "../assets/images/screen-game.png";
 import landingPageImage from "../assets/images/screen-landing.png";
 import antiSocialImage from "../assets/images/screen-antisocial.jpeg";
+import mitoImage from "../assets/images/screen-mito.png";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   // Datos de ejemplo para los proyectos
   const projects = [
+    {
+      image: mitoImage,
+      title: t("projects_section.projects.4.title"),
+      description: t("projects_section.projects.4.description"),
+      technologies: [
+        { name: "React", icon: <SiReact /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "Tailwind", icon: <SiTailwindcss /> },
+        { name: "Framer Motion", icon: <SiFramer /> },
+      ],
+      liveUrl: "https://mitorental.com/",
+      githubUrl: "https://github.com/JulianAlvarez07/mito",
+    },
     {
       image: antiSocialImage,
       title: t("projects_section.projects.0.title"),
