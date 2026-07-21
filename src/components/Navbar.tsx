@@ -43,7 +43,7 @@ const Navbar = () => {
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    id: string
+    id: string,
   ) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -79,14 +79,14 @@ const Navbar = () => {
               onClick={() =>
                 changeLanguage(currentLanguage === "en" ? "es" : "en")
               }
-              className="flex items-center gap-2 px-2 py-1 rounded transition-colors hover:text-blue-400 hover:bg-gray-800"
+              className="flex items-center gap-2 px-2 py-1 rounded transition-colors hover:text-blue-400 hover:bg-gray-800 cursor-pointer"
             >
               <Languages size={16} />
               {currentLanguage === "en" ? "ES" : "EN"}
             </button>
             <button
               onClick={toggleDarkMode}
-              className="flex items-center justify-center p-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="flex items-center justify-center p-2 rounded-full hover:bg-gray-800 transition-colors cursor-pointer"
             >
               {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
             </button>
