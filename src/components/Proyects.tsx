@@ -7,6 +7,9 @@ import {
   SiNodedotjs,
   SiExpress,
   SiPostgresql,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -15,12 +18,24 @@ import connect4Image from "../assets/images/screen-game.png";
 import landingPageImage from "../assets/images/screen-landing.png";
 import antiSocialImage from "../assets/images/screen-antisocial.jpeg";
 import mitoImage from "../assets/images/screen-mito.png";
+import intaImage from "../assets/images/inta-screen.jpeg";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   // Datos de ejemplo para los proyectos
   const projects = [
+    {
+      image: intaImage,
+      title: t("projects_section.projects.5.title"),
+      description: t("projects_section.projects.5.description"),
+      technologies: [
+        { name: "JavaScript", icon: <SiJavascript /> },
+        { name: "HTML", icon: <SiHtml5 /> },
+        { name: "CSS", icon: <SiCss3 /> },
+      ],
+      liveUrl: "https://sepa.inta.gob.ar/productos/focos/seccion-focos/",
+    },
     {
       image: mitoImage,
       title: t("projects_section.projects.4.title"),
