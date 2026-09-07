@@ -1,97 +1,123 @@
 {
   "home": "Inicio",
-  "about": "Acerca de",
+  "about": "Sobre mí",
   "projects": "Proyectos",
-  "skills": "Habilidades",
+  "skills": "Skills",
+  "contact": "Contacto",
+  "nav": {
+    "toggle_language": "Cambiar idioma",
+    "toggle_theme": "Cambiar tema",
+    "toggle_menu": "Abrir menú"
+  },
   "hero": {
-    "greeting": "¡Bienvenido! Mi nombre es",
-    "role": "Desarrollador Front-End",
-    "description": "Apasionado por crear experiencias web modernas, funcionales y centradas en el usuario.",
-    "education_status": "Tecnico Universitario en Programación Full Stack en la Universidad Nacional de Hurlingham.",
+    "greeting": "Hola, soy",
+    "role": "Desarrollador Full-Stack",
+    "description": "Construyo productos web de punta a punta: interfaces claras, APIs sólidas y un flujo de trabajo acelerado con IA.",
+    "education_status": "Técnico Universitario en Programación, graduado en la Universidad Nacional de Hurlingham.",
     "download_cv": "Descargar CV",
-    "alt_profile": "Julian Alvarez"
+    "view_projects": "Ver proyectos",
+    "available": "Disponible para oportunidades",
+    "location": "Buenos Aires, Argentina",
+    "alt_profile": "Julian Alvarez",
+    "highlights": ["Full-Stack", "Graduado", "IA aplicada", "ES / EN"]
   },
   "about_section": {
-    "title": "Sobre mí",
-    "greeting": "¡Hola! Soy Julián",
-    "paragraph1": "Actualmente tengo 23 años y finalice la {degree} en la {university}, carrera que comencé en marzo de 2022.",
-    "paragraph2": "A lo largo de la tecnicatura adquirí conocimientos tanto del desarrollo front-end como back-end, pero en este último tiempo decidí enfocarme principalmente en el {frontend}, especializándome en {react} y en la creación de interfaces modernas, responsivas y centradas en la experiencia de usuario.",
-    "paragraph3": "Me apasiona resolver problemas con código, aprender tecnologías nuevas y colaborar en proyectos reales que generen impacto. Estoy en búsqueda de mi {first_job}, donde pueda aportar mis habilidades y seguir creciendo en equipo.",
-    "degree": "Tecnicatura Universitaria en Programación Full Stack",
+    "title": "Quién soy",
+    "subtitle": "Full-stack, graduado, con experiencia en productos reales y un workflow moderno con IA.",
+    "greeting": "Hola, soy Julián",
+    "paragraph1": "Me gradué de la {degree} en la {university}, carrera que empecé en 2022. Ahí formé base tanto de front-end como de back-end.",
+    "paragraph2": "Hoy me muevo como {fullstack}: construyo interfaces con {react} y también el servidor, las APIs y las bases de datos. Incorporé {ai} al día a día para entregar más rápido, con más foco.",
+    "paragraph3": "Me interesa resolver problemas con código y colaborar en productos que se usen de verdad. Trabajé en herramientas reales como el Visor de Focos de INTA y en sitios para clientes. Estoy buscando mi {first_job}.",
+    "degree": "Tecnicatura Universitaria en Programación",
     "university": "Universidad Nacional de Hurlingham",
-    "frontend": "desarrollo front-end",
-    "react": "react",
-    "first_job": "primera experiencia profesional como desarrollador front-end",
+    "fullstack": "desarrollador full-stack",
+    "react": "React",
+    "ai": "herramientas de IA",
+    "first_job": "primer rol profesional como desarrollador full-stack",
     "location_title": "Ubicación",
     "location": "Buenos Aires, Argentina",
+    "education_title": "Formación",
+    "education": "Técnico en Programación · Graduado",
     "email_title": "Email",
     "email": "alvarezjuli30@gmail.com",
-    "experience_title": "Experiencia programando",
-    "experience": "Estudiante",
+    "experience_title": "Experiencia",
+    "experience": "3+ años programando",
+    "languages_title": "Idiomas",
+    "languages": "Español · English",
     "status_title": "Estado",
     "status": "Disponible",
-    "alt_image": "Foto de Julián"
+    "alt_image": "Espacio de trabajo de Julián"
   },
   "skills_section": {
-    "title": "Habilidades",
-    "technical": "TÉCNICAS",
-    "soft": "BLANDAS",
+    "title": "Con qué trabajo",
+    "subtitle": "Stack full-stack, más IA aplicada al desarrollo, datos y herramientas del día a día.",
+    "technical": "Técnicas",
+    "soft": "Habilidades blandas",
     "categories": {
       "frontend": "Front-end",
       "backend": "Back-end",
-      "database": "Base de datos",
-      "tools": "Otras herramientas"
+      "database": "Bases de datos",
+      "ai": "Inteligencia artificial",
+      "tools": "Herramientas"
     },
     "soft_skills": [
-      "Comunicación efectiva y trabajo en equipo",
-      "Escucha activa",
+      "Comunicación y trabajo en equipo",
       "Aprendizaje autónomo y continuo",
-      "Adaptabilidad al cambio",
-      "Responsabilidad personal y compromiso académico",
-      "Pensamiento analítico y enfoque en soluciones"
+      "Uso de IA para acelerar desarrollo",
+      "Adaptabilidad",
+      "Responsabilidad y compromiso",
+      "Pensamiento analítico y foco en soluciones"
     ]
   },
   "projects_section": {
-    "title": "Mis Proyectos",
+    "title": "Trabajo seleccionado",
+    "subtitle": "Productos reales, proyectos de cliente y piezas propias. El visor de INTA es el trabajo más relevante.",
+    "badges": {
+      "product": "Producto real",
+      "client": "Cliente",
+      "academic": "Académico"
+    },
     "project_card": {
-      "technologies": "Tecnologías:",
+      "technologies": "Tecnologías",
       "view_project": "Ver proyecto",
       "github": "GitHub"
     },
     "projects": [
       {
         "title": "Anti-Social",
-        "description": "Proyecto académico Full Stack: Simulación de una red social desarrollada en equipo durante el cuatrimestre. Permite registrarse, iniciar sesión, crear publicaciones, comentarlas y etiquetarlas. La UI está pensada con un enfoque fuerte en experiencia de usuario."
+        "description": "Red social académica full stack hecha en equipo: registro, login, publicaciones, comentarios y etiquetas, con foco en la experiencia de uso."
       },
       {
         "title": "Gym Control",
-        "description": "Una app web para crear, editar y seguir rutinas de entrenamiento de forma simple y efectiva."
+        "description": "App web para crear, editar y seguir rutinas de entrenamiento de forma simple."
       },
       {
-        "title": "Game: Connect 4",
-        "description": "Versión interactiva de Connect 4 hecha con React. Practiqué estados, componentes, lógica de juego y animaciones para crear una experiencia fluida y divertida."
+        "title": "Connect 4",
+        "description": "Versión interactiva de Connect 4 en React. Estados, lógica de juego y animaciones para una partida fluida."
       },
       {
         "title": "Landing Page",
-        "description": "Landing page basica para una empresa de venta de un producto especifico."
+        "description": "Landing page para un producto comercial, con foco en jerarquía visual y conversión."
       },
       {
         "title": "Mito",
-        "description": "Landing page para el emprendimiento de alquiler de articulos de grabacion Mito."
+        "description": "Sitio para Mito, un emprendimiento de alquiler de equipos de grabación."
       },
       {
-        "title": "INTA-SEPA-Focos",
-        "description": "Lideré el desarrollo evolutivo del Visor de Focos de Calor, una herramienta crítica para el monitoreo de incendios en Argentina"
+        "title": "INTA SEPA — Visor de Focos",
+        "description": "Lideré el desarrollo evolutivo del Visor de Focos de Calor, una herramienta crítica para el monitoreo de incendios en Argentina."
       }
     ]
   },
   "contact_section": {
-    "title": "Contacto",
+    "title": "Hablemos",
     "copied": "¡Copiado!",
-    "cta": "¿Interesado en trabajar juntos? ¡Hablemos!"
+    "cta": "Busco mi primer rol formal como desarrollador full-stack. Si estás armando un equipo, escribime.",
+    "email_cta": "Enviar email",
+    "copy_email": "Copiar email"
   },
   "footer": {
     "copyright": "Todos los derechos reservados.",
-    "built_with": "Construido con"
+    "built_with": "Hecho con"
   }
 }

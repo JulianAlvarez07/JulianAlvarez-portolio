@@ -1,15 +1,16 @@
 import ProjectCard from "./ProjectCard";
+import SectionHeading from "./SectionHeading";
 import {
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiFramer,
-  SiNodedotjs,
-  SiExpress,
-  SiPostgresql,
-  SiJavascript,
-  SiHtml5,
   SiCss3,
+  SiExpress,
+  SiFramer,
+  SiHtml5,
+  SiJavascript,
+  SiNodedotjs,
+  SiPostgresql,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -23,7 +24,6 @@ import intaImage from "../assets/images/inta-screen.jpeg";
 const Projects = () => {
   const { t } = useTranslation();
 
-  // Datos de ejemplo para los proyectos
   const projects = [
     {
       image: intaImage,
@@ -35,6 +35,8 @@ const Projects = () => {
         { name: "CSS", icon: <SiCss3 /> },
       ],
       liveUrl: "https://sepa.inta.gob.ar/productos/focos/seccion-focos/",
+      badge: t("projects_section.badges.product"),
+      featured: true,
     },
     {
       image: mitoImage,
@@ -48,6 +50,7 @@ const Projects = () => {
       ],
       liveUrl: "https://mitorental.com/",
       githubUrl: "https://github.com/JulianAlvarez07/mito",
+      badge: t("projects_section.badges.client"),
     },
     {
       image: antiSocialImage,
@@ -57,14 +60,13 @@ const Projects = () => {
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "Tailwind", icon: <SiTailwindcss /> },
-        { name: "Framer Motion", icon: <SiFramer /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
         { name: "Express", icon: <SiExpress /> },
         { name: "PostgreSQL", icon: <SiPostgresql /> },
       ],
       liveUrl: "https://anti-social-loscrudos.netlify.app/",
-      githubUrl:
-        "https://github.com/JulianAlvarez07/Unahur-antisocialred-front",
+      githubUrl: "https://github.com/JulianAlvarez07/Unahur-antisocialred-front",
+      badge: t("projects_section.badges.academic"),
     },
     {
       image: gymControlImage,
@@ -105,46 +107,40 @@ const Projects = () => {
     },
   ];
 
+  const [featured, ...rest] = projects;
+
   return (
-    <section id="projects" className="py-12 lg:py-20">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl font-bold mb-4 lg:mb-12 text-[#262626] dark:text-[#ffedd5]"
-          >
-            {t("projects_section.title")}
-          </motion.h2>
-        </div>
+    <section id="projects" className="scroll-mt-28 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading
+          eyebrow={t("projects")}
+          title={t("projects_section.title")}
+          description={t("projects_section.subtitle")}
+        />
+
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          transition={{ duration: 0.5 }}
+          className="mb-8"
         >
-          {projects.map((project, index) => (
+          <ProjectCard {...featured} />
+        </motion.div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {rest.map((project, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
+              key={project.title}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
             >
-              <ProjectCard
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                technologies={project.technologies}
-                liveUrl={project.liveUrl}
-                githubUrl={project.githubUrl}
-              />
+              <ProjectCard {...project} />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

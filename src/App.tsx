@@ -7,20 +7,17 @@ import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <>
+    <div className="relative min-h-screen">
+      <div className="pointer-events-none fixed inset-0 bg-grid" />
       <Navbar />
-      <div className="pt-24">
-        <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <Hero />
-        </div>
+      <main className="relative">
+        <Hero />
         <Projects />
-        <div className="max-w-5xl mx-auto px-6 lg:px-10">
-          <Skills />
-          <About />
-        </div>
+        <Skills />
+        <About />
         <Contact />
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 

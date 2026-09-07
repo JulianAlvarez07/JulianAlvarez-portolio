@@ -1,27 +1,30 @@
 import {
-  SiJavascript,
-  SiTypescript,
-  SiHtml5,
   SiCss3,
-  SiReact,
-  SiTailwindcss,
-  SiNodedotjs,
+  SiDocker,
   SiExpress,
-  SiPython,
-  SiPostgresql,
+  SiFigma,
+  SiGit,
+  SiGithubcopilot,
+  SiHtml5,
+  SiJavascript,
   SiMongodb,
   SiMysql,
-  SiGit,
-  SiDocker,
-  SiFigma,
+  SiNodedotjs,
+  SiOpenai,
+  SiPostgresql,
+  SiPython,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
+import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import SectionHeading from "./SectionHeading";
 
 const Skills = () => {
   const { t } = useTranslation();
 
-  // Datos de habilidades técnicas con iconos y colores
   const technicalSkills = {
     [t("skills_section.categories.frontend")]: [
       { name: "HTML5", icon: SiHtml5, color: "text-orange-600" },
@@ -33,17 +36,18 @@ const Skills = () => {
     ],
     [t("skills_section.categories.backend")]: [
       { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
-      {
-        name: "Express",
-        icon: SiExpress,
-        color: "text-gray-600 dark:text-gray-400",
-      },
+      { name: "Express", icon: SiExpress, color: "text-zinc-500" },
       { name: "Python", icon: SiPython, color: "text-yellow-500" },
     ],
     [t("skills_section.categories.database")]: [
       { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-700" },
       { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
       { name: "MySQL", icon: SiMysql, color: "text-blue-600" },
+    ],
+    [t("skills_section.categories.ai")]: [
+      { name: "Cursor", icon: Sparkles, color: "text-teal-500" },
+      { name: "ChatGPT", icon: SiOpenai, color: "text-foreground" },
+      { name: "GitHub Copilot", icon: SiGithubcopilot, color: "text-foreground" },
     ],
     [t("skills_section.categories.tools")]: [
       { name: "Git", icon: SiGit, color: "text-orange-600" },
@@ -52,94 +56,74 @@ const Skills = () => {
     ],
   };
 
-  // Habilidades blandas
   const softSkills = t("skills_section.soft_skills", {
     returnObjects: true,
   }) as string[];
 
   return (
-    <section id="skills" className="py-12 lg:py-20">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-12 text-center text-[#262626] dark:text-[#ffedd5]"
-      >
-        {t("skills_section.title")}
-      </motion.h2>
+    <section
+      id="skills"
+      className="scroll-mt-28 px-5 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading
+          eyebrow={t("skills")}
+          title={t("skills_section.title")}
+          description={t("skills_section.subtitle")}
+        />
 
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Columna de Habilidades Técnicas */}
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-8"
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
           >
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-              <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                {t("skills_section.technical")}
-              </h3>
-
-              <div className="space-y-8">
-                {Object.entries(technicalSkills).map(([category, skills]) => (
-                  <div key={category} className="space-y-4">
-                    <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700 pb-2">
-                      {category}
-                    </h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                      {skills.map((skill, index) => {
-                        const IconComponent = skill.icon;
-                        return (
-                          <motion.div
-                            key={index}
-                            whileHover={{ scale: 1.05 }}
-                            className="flex items-center gap-3 bg-gray-50 dark:bg-gray-700 rounded-lg p-3 transition-colors hover:bg-gray-100 dark:hover:bg-gray-600"
-                          >
-                            <IconComponent
-                              className={`text-2xl ${skill.color}`}
-                            />
-                            <span className="text-sm font-medium">
-                              {skill.name}
-                            </span>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
+            {Object.entries(technicalSkills).map(([category, skills]) => (
+              <div key={category}>
+                <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                  {category}
+                </h3>
+                <div className="flex flex-wrap gap-2.5">
+                  {skills.map((skill) => {
+                    const IconComponent = skill.icon;
+                    return (
+                      <div
+                        key={skill.name}
+                        className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 text-sm transition-colors hover:border-accent-color/40"
+                      >
+                        <IconComponent className={`text-lg ${skill.color}`} />
+                        <span>{skill.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            ))}
           </motion.div>
 
-          {/* Columna de Habilidades Blandas */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="rounded-3xl border border-border bg-surface p-6 sm:p-8"
           >
-            <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+            <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               {t("skills_section.soft")}
             </h3>
-
-            <div className="space-y-4">
-              {softSkills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="flex items-center gap-3 bg-gray-50 dark:bg-gray-700 rounded-lg p-4 transition-colors hover:bg-gray-100 dark:hover:bg-gray-600"
+            <div className="space-y-3">
+              {softSkills.map((skill) => (
+                <div
+                  key={skill}
+                  className="flex items-start gap-3 rounded-2xl bg-background/70 px-4 py-3"
                 >
-                  <div className="h-2 w-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500" />
-                  <p className="text-sm">{skill}</p>
-                </motion.div>
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-color" />
+                  <p className="text-sm leading-relaxed text-foreground/90">
+                    {skill}
+                  </p>
+                </div>
               ))}
             </div>
           </motion.div>

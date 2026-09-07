@@ -1,45 +1,22 @@
 import aboutImage from "../assets/images/about-image.jpeg";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import SectionHeading from "./SectionHeading";
 
 const About = () => {
   const { t } = useTranslation();
 
-  const renderParagraph1 = (text: string) => {
-    const parts = text.split(/(\{degree\}|\{university\})/);
-    return parts.map((part, index) => {
-      if (part === "{degree}") {
+  const renderWithHighlights = (text: string, tokens: string[]) => {
+    const escaped = tokens.map((token) =>
+      token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+    );
+    const pattern = new RegExp(`(${escaped.join("|")})`);
+    return text.split(pattern).map((part, index) => {
+      if (tokens.includes(part)) {
+        const key = part.replace(/[{}]/g, "");
         return (
-          <span key={index} className="text-accent-color font-semibold">
-            {t("about_section.degree")}
-          </span>
-        );
-      }
-      if (part === "{university}") {
-        return (
-          <span key={index} className="text-accent-color font-semibold">
-            {t("about_section.university")}
-          </span>
-        );
-      }
-      return part;
-    });
-  };
-
-  const renderParagraph2 = (text: string) => {
-    const parts = text.split(/(\{frontend\}|\{react\})/);
-    return parts.map((part, index) => {
-      if (part === "{frontend}") {
-        return (
-          <span key={index} className="text-accent-color font-semibold">
-            {t("about_section.frontend")}
-          </span>
-        );
-      }
-      if (part === "{react}") {
-        return (
-          <span key={index} className="text-accent-color font-semibold">
-            {t("about_section.react")}
+          <span key={`${part}-${index}`} className="font-medium text-accent-color">
+            {t(`about_section.${key}`)}
           </span>
         );
       }
@@ -47,111 +24,107 @@ const About = () => {
     });
   };
 
-  const renderParagraph3 = (text: string) => {
-    const parts = text.split(/(\{first_job\})/);
-    return parts.map((part, index) => {
-      if (part === "{first_job}") {
-        return (
-          <span key={index} className="text-accent-color font-semibold">
-            {t("about_section.first_job")}
-          </span>
-        );
-      }
-      return part;
-    });
-  };
+  const facts = [
+    { label: t("about_section.location_title"), value: t("about_section.location") },
+    {
+      label: t("about_section.education_title"),
+      value: t("about_section.education"),
+    },
+    {
+      label: t("about_section.experience_title"),
+      value: t("about_section.experience"),
+    },
+    {
+      label: t("about_section.languages_title"),
+      value: t("about_section.languages"),
+    },
+    { label: t("about_section.email_title"), value: t("about_section.email") },
+    {
+      label: t("about_section.status_title"),
+      value: t("about_section.status"),
+      accent: true,
+    },
+  ];
 
   return (
-    <section id="about" className="py-12 lg:py-20">
-      <div className="text-center mb-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-4 lg:mb-12 text-[#262626] dark:text-[#ffedd5]"
-        >
-          {t("about_section.title")}
-        </motion.h2>
-      </div>
+    <section id="about" className="scroll-mt-28 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading
+          eyebrow={t("about")}
+          title={t("about_section.title")}
+          description={t("about_section.subtitle")}
+        />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center max-w-6xl mx-auto">
-        {/* Imagen */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center lg:justify-end"
-        >
-          <div className="w-72 h-72 overflow-hidden rounded-lg shadow-lg">
-            <img
-              src={aboutImage}
-              alt={t("about_section.alt_image")}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </motion.div>
+        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative mx-auto w-full max-w-md"
+          >
+            <div className="overflow-hidden rounded-3xl border border-border shadow-xl">
+              <img
+                src={aboutImage}
+                alt={t("about_section.alt_image")}
+                className="aspect-[4/5] w-full object-cover"
+              />
+            </div>
+          </motion.div>
 
-        {/* Contenido de texto */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="space-y-6"
-        >
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h3 className="text-2xl font-semibold tracking-tight text-foreground">
               {t("about_section.greeting")}
             </h3>
-            <p className="text-md text-gray-800 dark:text-gray-200 leading-relaxed mb-4 text-justify">
-              {renderParagraph1(t("about_section.paragraph1"))}
-            </p>
-            <p className="text-md text-gray-800 dark:text-gray-200 leading-relaxed mb-4 text-justify">
-              {renderParagraph2(t("about_section.paragraph2"))}
-            </p>
-            <p className="text-md text-gray-800 dark:text-gray-200 leading-relaxed text-justify">
-              {renderParagraph3(t("about_section.paragraph3"))}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-8 pt-6 w-full">
-            <div>
-              <h4 className="font-semibold">
-                {t("about_section.email_title")}
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300">
-                {t("about_section.email")}
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                {renderWithHighlights(t("about_section.paragraph1"), [
+                  "{degree}",
+                  "{university}",
+                ])}
               </p>
-            </div>
-            <div>
-              <h4 className="font-semibold">
-                {t("about_section.location_title")}
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300">
-                {t("about_section.location")}
+              <p>
+                {renderWithHighlights(t("about_section.paragraph2"), [
+                  "{fullstack}",
+                  "{react}",
+                  "{ai}",
+                ])}
+              </p>
+              <p>
+                {renderWithHighlights(t("about_section.paragraph3"), [
+                  "{first_job}",
+                ])}
               </p>
             </div>
 
-            <div>
-              <h4 className="font-semibold">
-                {t("about_section.experience_title")}
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300">
-                {t("about_section.experience")}
-              </p>
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {facts.map((fact) => (
+                <div
+                  key={fact.label}
+                  className="rounded-2xl border border-border bg-surface px-4 py-4"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                    {fact.label}
+                  </p>
+                  <p
+                    className={`mt-1 text-sm ${
+                      fact.accent
+                        ? "font-medium text-emerald-600 dark:text-emerald-400"
+                        : "text-foreground"
+                    }`}
+                  >
+                    {fact.value}
+                  </p>
+                </div>
+              ))}
             </div>
-            <div>
-              <h4 className="font-semibold">
-                {t("about_section.status_title")}
-              </h4>
-              <p className="text-green-600 dark:text-green-400">
-                {t("about_section.status")}
-              </p>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

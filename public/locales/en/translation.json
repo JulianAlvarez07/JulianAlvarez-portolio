@@ -3,92 +3,118 @@
   "about": "About",
   "projects": "Projects",
   "skills": "Skills",
+  "contact": "Contact",
+  "nav": {
+    "toggle_language": "Switch language",
+    "toggle_theme": "Toggle theme",
+    "toggle_menu": "Open menu"
+  },
   "hero": {
-    "greeting": "Welcome! My name is",
-    "role": "Front-End Developer",
-    "description": "Passionate about creating modern, functional and user-centered web experiences.",
-    "education_status": "University Technician in Full Stack Programming at the National University of Hurlingham.",
+    "greeting": "Hi, I'm",
+    "role": "Full-Stack Developer",
+    "description": "I build web products end to end: clear interfaces, solid APIs, and an AI-accelerated workflow.",
+    "education_status": "University Technician in Programming, graduated from the National University of Hurlingham.",
     "download_cv": "Download CV",
-    "alt_profile": "Julian Alvarez"
+    "view_projects": "View projects",
+    "available": "Open to opportunities",
+    "location": "Buenos Aires, Argentina",
+    "alt_profile": "Julian Alvarez",
+    "highlights": ["Full-Stack", "Graduate", "AI-assisted", "ES / EN"]
   },
   "about_section": {
     "title": "About me",
-    "greeting": "Hi! I'm Julián",
-    "paragraph1": "I'm currently 23 years old and I finished my {degree} at {university}, a program I started in March 2022.",
-    "paragraph2": "Throughout my studies, I gained knowledge in both front-end and back-end development, but recently I decided to focus mainly on {frontend}, specializing in {react} and creating modern, responsive interfaces centered on user experience.",
-    "paragraph3": "I'm passionate about solving problems with code, learning new technologies, and collaborating on real projects that make an impact. I'm looking for my {first_job}, where I can contribute my skills and continue growing as part of a team.",
-    "degree": "Full Stack Programming Technical Degree",
+    "subtitle": "Full-stack, graduated, with real-product experience and a modern AI workflow.",
+    "greeting": "Hi, I'm Julián",
+    "paragraph1": "I graduated with a {degree} from {university}, a program I started in 2022. That's where I built a foundation in both front-end and back-end.",
+    "paragraph2": "Today I work as a {fullstack}: I build interfaces with {react} and also the server, APIs, and databases. I brought {ai} into my daily workflow to ship faster, with more focus.",
+    "paragraph3": "I like solving problems with code and collaborating on products people actually use. I've worked on real tools like INTA's Heat Spot Viewer and on client sites. I'm looking for my {first_job}.",
+    "degree": "University Technician in Programming",
     "university": "National University of Hurlingham",
-    "frontend": "front-end development",
-    "react": "react",
-    "first_job": "first professional experience as a front-end developer",
+    "fullstack": "full-stack developer",
+    "react": "React",
+    "ai": "AI tools",
+    "first_job": "first professional role as a full-stack developer",
     "location_title": "Location",
     "location": "Buenos Aires, Argentina",
+    "education_title": "Education",
+    "education": "Programming Technician · Graduate",
     "email_title": "Email",
     "email": "alvarezjuli30@gmail.com",
-    "experience_title": "Experience programming",
-    "experience": "Student",
+    "experience_title": "Experience",
+    "experience": "3+ years coding",
+    "languages_title": "Languages",
+    "languages": "Spanish · English",
     "status_title": "Status",
     "status": "Available",
-    "alt_image": "Julián's photo"
+    "alt_image": "Julián's workspace"
   },
   "skills_section": {
-    "title": "Skills",
-    "technical": "TECHNICAL",
-    "soft": "SOFT",
+    "title": "What I work with",
+    "subtitle": "A full-stack stack, plus AI applied to development, data, and everyday tools.",
+    "technical": "Technical",
+    "soft": "Soft skills",
     "categories": {
       "frontend": "Front-end",
       "backend": "Back-end",
       "database": "Databases",
-      "tools": "Other tools"
+      "ai": "Artificial intelligence",
+      "tools": "Tools"
     },
     "soft_skills": [
-      "Effective communication and teamwork",
-      "Active listening",
-      "Autonomous and continuous learning",
-      "Adaptability to change",
-      "Personal responsibility and academic commitment",
-      "Analytical thinking and solution-focused"
+      "Communication and teamwork",
+      "Self-driven, continuous learning",
+      "Using AI to ship faster",
+      "Adaptability",
+      "Ownership and commitment",
+      "Analytical, solution-focused thinking"
     ]
   },
   "projects_section": {
-    "title": "My Projects",
+    "title": "Selected work",
+    "subtitle": "Real products, client work, and personal pieces. The INTA viewer is the most relevant project.",
+    "badges": {
+      "product": "Real product",
+      "client": "Client",
+      "academic": "Academic"
+    },
     "project_card": {
-      "technologies": "Technologies:",
+      "technologies": "Technologies",
       "view_project": "View project",
       "github": "GitHub"
     },
     "projects": [
       {
         "title": "Anti-Social",
-        "description": "Academic Full Stack team project: A social network simulation developed during the semester. Features user registration, login, post creation, comments, and tagging. The UI is designed with a strong focus on user experience."
+        "description": "Full-stack academic social network built as a team: auth, posts, comments, and tags, with a strong UX focus."
       },
       {
         "title": "Gym Control",
-        "description": "A web app to create, edit and track workout routines in a simple and effective way."
+        "description": "A web app to create, edit, and track workout routines without extra friction."
       },
       {
-        "title": "Game: Connect 4",
-        "description": "Interactive version of Connect 4 made with React. I practiced states, components, game logic and animations to create a smooth and fun experience."
+        "title": "Connect 4",
+        "description": "An interactive Connect 4 game in React. State, game logic, and animation for a smooth match."
       },
       {
         "title": "Landing Page",
-        "description": "Basic landing page for a company selling a specific product."
+        "description": "A product landing page focused on visual hierarchy and conversion."
       },
       {
         "title": "Mito",
-        "description": "Landing page for the recording equipment rental business Mito."
+        "description": "A site for Mito, a recording-equipment rental studio."
       },
       {
-        "title": "INTA-SEPA-Spotlights",
-        "description": "I led the evolutionary development of the Heat Spot Viewer, a critical tool for monitoring fires in Argentina"
+        "title": "INTA SEPA — Heat Spot Viewer",
+        "description": "I led the ongoing development of the Heat Spot Viewer, a critical tool for monitoring wildfires in Argentina."
       }
     ]
   },
   "contact_section": {
-    "title": "Contact",
+    "title": "Let's talk",
     "copied": "Copied!",
-    "cta": "Interested in working together? Let's talk!"
+    "cta": "I'm looking for my first formal role as a full-stack developer. If you're hiring, send me a note.",
+    "email_cta": "Send email",
+    "copy_email": "Copy email"
   },
   "footer": {
     "copyright": "All rights reserved.",

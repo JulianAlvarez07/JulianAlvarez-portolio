@@ -1,18 +1,11 @@
+import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface Technology {
   name: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 interface ProjectCardProps {
@@ -22,6 +15,8 @@ interface ProjectCardProps {
   technologies: Technology[];
   liveUrl?: string;
   githubUrl?: string;
+  badge?: string;
+  featured?: boolean;
 }
 
 const ProjectCard = ({
@@ -31,74 +26,137 @@ const ProjectCard = ({
   technologies,
   liveUrl,
   githubUrl,
+  badge,
+  featured = false,
 }: ProjectCardProps) => {
   const { t } = useTranslation();
 
+  if (featured) {
+    return (
+      <article className="overflow-hidden rounded-3xl border border-border bg-surface shadow-sm transition-shadow duration-300 hover:shadow-xl">
+        <div className="grid lg:grid-cols-2">
+          <div className="aspect-[16/10] overflow-hidden lg:aspect-auto lg:min-h-[360px]">
+            <img
+              src={image}
+              alt={title}
+              className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+          <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
+            {badge && (
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-accent-color">
+                {badge}
+              </p>
+            )}
+            <h3 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              {title}
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              {description}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {technologies.map((tech) => (
+                <span
+                  key={tech.name}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-2.5 py-1 text-xs text-muted-foreground"
+                >
+                  <span className="text-sm">{tech.icon}</span>
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {liveUrl && (
+                <Button
+                  className="cursor-pointer bg-foreground text-background hover:bg-foreground/90"
+                  onClick={() =>
+                    window.open(liveUrl, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  {t("projects_section.project_card.view_project")}
+                </Button>
+              )}
+              {githubUrl && (
+                <Button
+                  variant="outline"
+                  className="cursor-pointer"
+                  onClick={() =>
+                    window.open(githubUrl, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <Github className="h-4 w-4" />
+                  {t("projects_section.project_card.github")}
+                </Button>
+              )}
+            </div>
+          </div>
+        </div>
+      </article>
+    );
+  }
+
   return (
-    <Card className="w-full max-w-sm overflow-hidden bg-color border border-gray-200 dark:border-gray-700 transform transition-all duration-300 hover:scale-[1.01] hover:shadow-xl">
-      {/* Imagen del proyecto */}
-      <div className="aspect-video overflow-hidden">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <div className="aspect-[16/10] overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
       </div>
-
-      {/* Contenido */}
-      <CardHeader>
-        <CardTitle className="text-xl">{title}</CardTitle>
-        <CardDescription className="text-gray-700 dark:text-gray-300">
-          {description}
-        </CardDescription>
-      </CardHeader>
-
-      <CardContent>
-        {/* Tecnologías */}
-        <div className="space-y-2">
-          <p className="text-sm font-medium text-muted-foreground">
-            {t("projects_section.project_card.technologies")}
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        {badge && (
+          <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent-color">
+            {badge}
           </p>
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-1 px-2 py-1 bg-secondary rounded-md text-xs"
-              >
-                <span className="text-sm">{tech.icon}</span>
-                <span>{tech.name}</span>
-              </div>
-            ))}
-          </div>
+        )}
+        <h3 className="text-xl font-semibold tracking-tight text-foreground">
+          {title}
+        </h3>
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+          {description}
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span
+              key={tech.name}
+              className="inline-flex items-center gap-1.5 rounded-full border border-border px-2 py-1 text-[11px] text-muted-foreground"
+            >
+              <span className="text-sm">{tech.icon}</span>
+              {tech.name}
+            </span>
+          ))}
         </div>
-      </CardContent>
-
-      {/* Botones */}
-      <CardFooter className="gap-2">
-        {liveUrl && (
-          <Button
-            variant="default"
-            size="sm"
-            className="flex-1 cursor-pointer"
-            onClick={() => window.open(liveUrl, "_blank")}
-          >
-            <ExternalLink className="w-4 h-4" />
-            {t("projects_section.project_card.view_project")}
-          </Button>
-        )}
-        {githubUrl && (
-          <Button
-            variant="outline"
-            size="sm"
-            className="flex-1 cursor-pointer"
-            onClick={() => window.open(githubUrl, "_blank")}
-          >
-            <Github className="w-4 h-4" />
-            {t("projects_section.project_card.github")}
-          </Button>
-        )}
-      </CardFooter>
-    </Card>
+        <div className="mt-auto flex gap-2 pt-6">
+          {liveUrl && (
+            <Button
+              size="sm"
+              className="flex-1 cursor-pointer bg-foreground text-background hover:bg-foreground/90"
+              onClick={() =>
+                window.open(liveUrl, "_blank", "noopener,noreferrer")
+              }
+            >
+              <ExternalLink className="h-4 w-4" />
+              {t("projects_section.project_card.view_project")}
+            </Button>
+          )}
+          {githubUrl && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex-1 cursor-pointer"
+              onClick={() =>
+                window.open(githubUrl, "_blank", "noopener,noreferrer")
+              }
+            >
+              <Github className="h-4 w-4" />
+              {t("projects_section.project_card.github")}
+            </Button>
+          )}
+        </div>
+      </div>
+    </article>
   );
 };
 
