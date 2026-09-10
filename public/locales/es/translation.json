@@ -13,23 +13,24 @@
     "greeting": "Hola, soy",
     "role": "Desarrollador Full-Stack",
     "description": "Construyo productos web de punta a punta: interfaces claras, APIs sólidas y un flujo de trabajo acelerado con IA.",
-    "education_status": "Técnico Universitario en Programación, graduado en la Universidad Nacional de Hurlingham.",
+    "education_status": "Técnico Universitario en Programación, graduado en 2025, y Licenciatura en Informática (4to año) en la Universidad Nacional de Hurlingham.",
     "download_cv": "Descargar CV",
     "view_projects": "Ver proyectos",
     "available": "Disponible para oportunidades",
     "location": "Buenos Aires, Argentina",
     "alt_profile": "Julian Alvarez",
-    "highlights": ["Full-Stack", "Graduado", "IA aplicada", "ES / EN"]
+    "highlights": ["Full-Stack", "UNAHUR", "INTA", "ES / EN"]
   },
   "about_section": {
     "title": "Quién soy",
-    "subtitle": "Full-stack, graduado, con experiencia en productos reales y un workflow moderno con IA.",
+    "subtitle": "Full-stack, graduado en UNAHUR, con práctica profesional en INTA y un workflow moderno con IA.",
     "greeting": "Hola, soy Julián",
-    "paragraph1": "Me gradué de la {degree} en la {university}, carrera que empecé en 2022. Ahí formé base tanto de front-end como de back-end.",
+    "paragraph1": "Me gradué de la {degree} en la {university} en 2025. En paralelo curso la {licenciatura}, ahora en 4to año. Empecé en 2022 y ahí formé base tanto de front-end como de back-end.",
     "paragraph2": "Hoy me muevo como {fullstack}: construyo interfaces con {react} y también el servidor, las APIs y las bases de datos. Incorporé {ai} al día a día para entregar más rápido, con más foco.",
-    "paragraph3": "Me interesa resolver problemas con código y colaborar en productos que se usen de verdad. Trabajé en herramientas reales como el Visor de Focos de INTA y en sitios para clientes. Estoy buscando mi {first_job}.",
+    "paragraph3": "Me interesa resolver problemas con código y colaborar en productos que se usen de verdad. Completé una práctica profesional supervisada en INTA, trabajando en el Visor de Focos de Calor. Estoy buscando mi {first_job}.",
     "degree": "Tecnicatura Universitaria en Programación",
     "university": "Universidad Nacional de Hurlingham",
+    "licenciatura": "Licenciatura en Informática",
     "fullstack": "desarrollador full-stack",
     "react": "React",
     "ai": "herramientas de IA",
@@ -37,16 +38,27 @@
     "location_title": "Ubicación",
     "location": "Buenos Aires, Argentina",
     "education_title": "Formación",
-    "education": "Técnico en Programación · Graduado",
     "email_title": "Email",
     "email": "alvarezjuli30@gmail.com",
-    "experience_title": "Experiencia",
-    "experience": "3+ años programando",
     "languages_title": "Idiomas",
     "languages": "Español · English",
     "status_title": "Estado",
     "status": "Disponible",
-    "alt_image": "Espacio de trabajo de Julián"
+    "alt_image": "Espacio de trabajo de Julián",
+    "studies": [
+      {
+        "title": "Técnico Universitario en Programación",
+        "institution": "Universidad Nacional de Hurlingham",
+        "period": "Finalizado 2025",
+        "meta": "Promedio 8.39"
+      },
+      {
+        "title": "Licenciatura en Informática",
+        "institution": "Universidad Nacional de Hurlingham",
+        "period": "2022 – actualidad",
+        "meta": "4to año · Promedio 8.39"
+      }
+    ]
   },
   "skills_section": {
     "title": "Con qué trabajo",
@@ -84,28 +96,29 @@
     },
     "projects": [
       {
-        "title": "Anti-Social",
-        "description": "Red social académica full stack hecha en equipo: registro, login, publicaciones, comentarios y etiquetas, con foco en la experiencia de uso."
-      },
-      {
-        "title": "Gym Control",
-        "description": "App web para crear, editar y seguir rutinas de entrenamiento de forma simple."
-      },
-      {
-        "title": "Connect 4",
-        "description": "Versión interactiva de Connect 4 en React. Estados, lógica de juego y animaciones para una partida fluida."
-      },
-      {
-        "title": "Landing Page",
-        "description": "Landing page para un producto comercial, con foco en jerarquía visual y conversión."
+        "title": "INTA SEPA — Visor de Focos",
+        "description": "App web interactiva para visualizar, filtrar y analizar focos de incendios en Argentina con datos satelitales NASA FIRMS (sensores MODIS y VIIRS).",
+        "meta": "INTA · PPS · Full Stack · ago–dic 2025",
+        "highlights": [
+          "Reingeniería de un prototipo monolítico a arquitectura modular ES6 (dataManager, mapManager, tableManager).",
+          "Frontend GIS: mapa Leaflet.js, análisis geoespacial con Turf.js y UI HTML/CSS responsive (capas, leyendas, modales).",
+          "Datos FIRMS: parsing CSV con PapaParse, caché híbrida (memoria + localStorage), indexación espacial con Rbush y enriquecimiento de provincias/departamentos (IGN).",
+          "Automatización diaria de descarga, validación y combinación con scripts PowerShell y Bash en el servidor SEPA.",
+          "Entregables: visor desplegado, automatización operativa, Protocolo de Desarrollo e Informe de Uso.",
+          "Exportación a CSV de datos filtrados y datasets."
+        ]
       },
       {
         "title": "Mito",
         "description": "Sitio para Mito, un emprendimiento de alquiler de equipos de grabación."
       },
       {
-        "title": "INTA SEPA — Visor de Focos",
-        "description": "Lideré el desarrollo evolutivo del Visor de Focos de Calor, una herramienta crítica para el monitoreo de incendios en Argentina."
+        "title": "Anti-Social",
+        "description": "Red social académica full stack hecha en equipo: registro, login, publicaciones, comentarios y etiquetas, con foco en la experiencia de uso."
+      },
+      {
+        "title": "Gym Control",
+        "description": "App web para crear, editar y seguir rutinas de entrenamiento de forma simple."
       }
     ]
   },
@@ -113,7 +126,6 @@
     "title": "Hablemos",
     "copied": "¡Copiado!",
     "cta": "Busco mi primer rol formal como desarrollador full-stack. Si estás armando un equipo, escribime.",
-    "email_cta": "Enviar email",
     "copy_email": "Copiar email"
   },
   "footer": {

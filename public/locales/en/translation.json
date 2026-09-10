@@ -13,23 +13,24 @@
     "greeting": "Hi, I'm",
     "role": "Full-Stack Developer",
     "description": "I build web products end to end: clear interfaces, solid APIs, and an AI-accelerated workflow.",
-    "education_status": "University Technician in Programming, graduated from the National University of Hurlingham.",
+    "education_status": "University Technician in Programming, graduated in 2025, and a Bachelor's in Computer Science (4th year) at the National University of Hurlingham.",
     "download_cv": "Download CV",
     "view_projects": "View projects",
     "available": "Open to opportunities",
     "location": "Buenos Aires, Argentina",
     "alt_profile": "Julian Alvarez",
-    "highlights": ["Full-Stack", "Graduate", "AI-assisted", "ES / EN"]
+    "highlights": ["Full-Stack", "UNAHUR", "INTA", "ES / EN"]
   },
   "about_section": {
     "title": "About me",
-    "subtitle": "Full-stack, graduated, with real-product experience and a modern AI workflow.",
+    "subtitle": "Full-stack, UNAHUR graduate, with a professional internship at INTA and a modern AI workflow.",
     "greeting": "Hi, I'm Julián",
-    "paragraph1": "I graduated with a {degree} from {university}, a program I started in 2022. That's where I built a foundation in both front-end and back-end.",
+    "paragraph1": "I graduated with a {degree} from {university} in 2025. In parallel I'm studying a {licenciatura}, now in the 4th year. I started in 2022, and that's where I built a foundation in both front-end and back-end.",
     "paragraph2": "Today I work as a {fullstack}: I build interfaces with {react} and also the server, APIs, and databases. I brought {ai} into my daily workflow to ship faster, with more focus.",
-    "paragraph3": "I like solving problems with code and collaborating on products people actually use. I've worked on real tools like INTA's Heat Spot Viewer and on client sites. I'm looking for my {first_job}.",
+    "paragraph3": "I like solving problems with code and collaborating on products people actually use. I completed a supervised professional internship at INTA, working on the Heat Spot Viewer. I'm looking for my {first_job}.",
     "degree": "University Technician in Programming",
     "university": "National University of Hurlingham",
+    "licenciatura": "Bachelor's in Computer Science",
     "fullstack": "full-stack developer",
     "react": "React",
     "ai": "AI tools",
@@ -37,16 +38,27 @@
     "location_title": "Location",
     "location": "Buenos Aires, Argentina",
     "education_title": "Education",
-    "education": "Programming Technician · Graduate",
     "email_title": "Email",
     "email": "alvarezjuli30@gmail.com",
-    "experience_title": "Experience",
-    "experience": "3+ years coding",
     "languages_title": "Languages",
     "languages": "Spanish · English",
     "status_title": "Status",
     "status": "Available",
-    "alt_image": "Julián's workspace"
+    "alt_image": "Julián's workspace",
+    "studies": [
+      {
+        "title": "University Technician in Programming",
+        "institution": "National University of Hurlingham",
+        "period": "Completed 2025",
+        "meta": "Average 8.39"
+      },
+      {
+        "title": "Bachelor's in Computer Science",
+        "institution": "National University of Hurlingham",
+        "period": "2022 – present",
+        "meta": "4th year · Average 8.39"
+      }
+    ]
   },
   "skills_section": {
     "title": "What I work with",
@@ -84,28 +96,29 @@
     },
     "projects": [
       {
-        "title": "Anti-Social",
-        "description": "Full-stack academic social network built as a team: auth, posts, comments, and tags, with a strong UX focus."
-      },
-      {
-        "title": "Gym Control",
-        "description": "A web app to create, edit, and track workout routines without extra friction."
-      },
-      {
-        "title": "Connect 4",
-        "description": "An interactive Connect 4 game in React. State, game logic, and animation for a smooth match."
-      },
-      {
-        "title": "Landing Page",
-        "description": "A product landing page focused on visual hierarchy and conversion."
+        "title": "INTA SEPA — Heat Spot Viewer",
+        "description": "An interactive web app to visualize, filter, and analyze wildfire hotspots in Argentina using NASA FIRMS satellite data (MODIS and VIIRS sensors).",
+        "meta": "INTA · Internship · Full Stack · Aug–Dec 2025",
+        "highlights": [
+          "Re-engineered a monolithic prototype into a modular ES6 architecture (dataManager, mapManager, tableManager).",
+          "GIS frontend: Leaflet.js map, Turf.js geospatial analysis, and a responsive HTML/CSS UI (layers, legends, modals).",
+          "FIRMS data: CSV parsing with PapaParse, hybrid cache (memory + localStorage), spatial indexing with Rbush, and province/department enrichment (IGN).",
+          "Daily automation for download, validation, and merging with PowerShell and Bash scripts on the SEPA server.",
+          "Deliverables: deployed viewer, operational daily automation, Development Protocol, and Usage Report.",
+          "CSV export of filtered data and datasets."
+        ]
       },
       {
         "title": "Mito",
         "description": "A site for Mito, a recording-equipment rental studio."
       },
       {
-        "title": "INTA SEPA — Heat Spot Viewer",
-        "description": "I led the ongoing development of the Heat Spot Viewer, a critical tool for monitoring wildfires in Argentina."
+        "title": "Anti-Social",
+        "description": "Full-stack academic social network built as a team: auth, posts, comments, and tags, with a strong UX focus."
+      },
+      {
+        "title": "Gym Control",
+        "description": "A web app to create, edit, and track workout routines without extra friction."
       }
     ]
   },
@@ -113,7 +126,6 @@
     "title": "Let's talk",
     "copied": "Copied!",
     "cta": "I'm looking for my first formal role as a full-stack developer. If you're hiring, send me a note.",
-    "email_cta": "Send email",
     "copy_email": "Copy email"
   },
   "footer": {

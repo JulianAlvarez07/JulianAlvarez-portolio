@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 interface Technology {
   name: string;
-  icon: ReactNode;
+  icon?: ReactNode;
 }
 
 interface ProjectCardProps {
@@ -17,6 +17,8 @@ interface ProjectCardProps {
   githubUrl?: string;
   badge?: string;
   featured?: boolean;
+  meta?: string;
+  highlights?: string[];
 }
 
 const ProjectCard = ({
@@ -28,6 +30,8 @@ const ProjectCard = ({
   githubUrl,
   badge,
   featured = false,
+  meta,
+  highlights = [],
 }: ProjectCardProps) => {
   const { t } = useTranslation();
 
@@ -35,7 +39,7 @@ const ProjectCard = ({
     return (
       <article className="overflow-hidden rounded-3xl border border-border bg-surface shadow-sm transition-shadow duration-300 hover:shadow-xl">
         <div className="grid lg:grid-cols-2">
-          <div className="aspect-[16/10] overflow-hidden lg:aspect-auto lg:min-h-[360px]">
+          <div className="aspect-[16/10] overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[420px]">
             <img
               src={image}
               alt={title}
@@ -51,16 +55,32 @@ const ProjectCard = ({
             <h3 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               {title}
             </h3>
+            {meta && (
+              <p className="mt-2 text-sm text-muted-foreground">{meta}</p>
+            )}
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
               {description}
             </p>
+            {highlights.length > 0 && (
+              <ul className="mt-5 space-y-2.5">
+                {highlights.map((highlight) => (
+                  <li
+                    key={highlight}
+                    className="flex gap-3 text-sm leading-relaxed text-foreground/90"
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-color" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
             <div className="mt-6 flex flex-wrap gap-2">
               {technologies.map((tech) => (
                 <span
                   key={tech.name}
                   className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-2.5 py-1 text-xs text-muted-foreground"
                 >
-                  <span className="text-sm">{tech.icon}</span>
+                  {tech.icon && <span className="text-sm">{tech.icon}</span>}
                   {tech.name}
                 </span>
               ))}
@@ -123,7 +143,7 @@ const ProjectCard = ({
               key={tech.name}
               className="inline-flex items-center gap-1.5 rounded-full border border-border px-2 py-1 text-[11px] text-muted-foreground"
             >
-              <span className="text-sm">{tech.icon}</span>
+              {tech.icon && <span className="text-sm">{tech.icon}</span>}
               {tech.name}
             </span>
           ))}

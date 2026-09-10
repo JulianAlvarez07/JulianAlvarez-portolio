@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaEnvelope, FaGithub, FaLinkedin, FaReact } from "react-icons/fa";
-import { Check, Copy, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin, FaReact } from "react-icons/fa";
+import { Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "./SectionHeading";
 
@@ -39,40 +39,24 @@ const Contact = () => {
               <p className="text-sm uppercase tracking-[0.16em] text-muted-foreground">
                 Email
               </p>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="mt-2 block text-2xl font-semibold tracking-tight text-foreground transition-colors hover:text-accent-color sm:text-3xl"
-              >
+              <p className="mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 {EMAIL}
-              </a>
+              </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button
-                size="lg"
-                className="cursor-pointer bg-foreground text-background hover:bg-foreground/90"
-                onClick={() => {
-                  window.location.href = `mailto:${EMAIL}`;
-                }}
-              >
-                <Mail className="h-4 w-4" />
-                {t("contact_section.email_cta")}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="cursor-pointer"
-                onClick={handleCopyEmail}
-              >
-                {copied ? (
-                  <Check className="h-4 w-4" />
-                ) : (
-                  <Copy className="h-4 w-4" />
-                )}
-                {copied
-                  ? t("contact_section.copied")
-                  : t("contact_section.copy_email")}
-              </Button>
-            </div>
+            <Button
+              size="lg"
+              className="cursor-pointer bg-foreground text-background hover:bg-foreground/90"
+              onClick={handleCopyEmail}
+            >
+              {copied ? (
+                <Check className="h-4 w-4" />
+              ) : (
+                <Copy className="h-4 w-4" />
+              )}
+              {copied
+                ? t("contact_section.copied")
+                : t("contact_section.copy_email")}
+            </Button>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3 border-t border-border pt-8">
@@ -93,13 +77,6 @@ const Contact = () => {
             >
               <FaLinkedin />
               LinkedIn
-            </a>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm transition-colors hover:border-accent-color/40 hover:text-accent-color"
-            >
-              <FaEnvelope />
-              Email
             </a>
           </div>
         </div>

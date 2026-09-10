@@ -1,11 +1,11 @@
 import ProjectCard from "./ProjectCard";
 import SectionHeading from "./SectionHeading";
 import {
-  SiCss3,
   SiExpress,
   SiFramer,
-  SiHtml5,
+  SiGnubash,
   SiJavascript,
+  SiLeaflet,
   SiNodedotjs,
   SiPostgresql,
   SiReact,
@@ -15,8 +15,6 @@ import {
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import gymControlImage from "../assets/images/screen-gym.png";
-import connect4Image from "../assets/images/screen-game.png";
-import landingPageImage from "../assets/images/screen-landing.png";
 import antiSocialImage from "../assets/images/screen-antisocial.jpeg";
 import mitoImage from "../assets/images/screen-mito.png";
 import intaImage from "../assets/images/inta-screen.jpeg";
@@ -24,15 +22,28 @@ import intaImage from "../assets/images/inta-screen.jpeg";
 const Projects = () => {
   const { t } = useTranslation();
 
+  const intaHighlightsRaw = t("projects_section.projects.0.highlights", {
+    returnObjects: true,
+  });
+  const intaHighlights = Array.isArray(intaHighlightsRaw)
+    ? (intaHighlightsRaw as string[])
+    : [];
+
   const projects = [
     {
       image: intaImage,
-      title: t("projects_section.projects.5.title"),
-      description: t("projects_section.projects.5.description"),
+      title: t("projects_section.projects.0.title"),
+      description: t("projects_section.projects.0.description"),
+      meta: t("projects_section.projects.0.meta"),
+      highlights: intaHighlights,
       technologies: [
         { name: "JavaScript", icon: <SiJavascript /> },
-        { name: "HTML", icon: <SiHtml5 /> },
-        { name: "CSS", icon: <SiCss3 /> },
+        { name: "Leaflet", icon: <SiLeaflet /> },
+        { name: "Turf.js" },
+        { name: "PapaParse" },
+        { name: "Rbush" },
+        { name: "PowerShell" },
+        { name: "Bash", icon: <SiGnubash /> },
       ],
       liveUrl: "https://sepa.inta.gob.ar/productos/focos/seccion-focos/",
       badge: t("projects_section.badges.product"),
@@ -40,8 +51,8 @@ const Projects = () => {
     },
     {
       image: mitoImage,
-      title: t("projects_section.projects.4.title"),
-      description: t("projects_section.projects.4.description"),
+      title: t("projects_section.projects.1.title"),
+      description: t("projects_section.projects.1.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
@@ -54,8 +65,8 @@ const Projects = () => {
     },
     {
       image: antiSocialImage,
-      title: t("projects_section.projects.0.title"),
-      description: t("projects_section.projects.0.description"),
+      title: t("projects_section.projects.2.title"),
+      description: t("projects_section.projects.2.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
@@ -70,8 +81,8 @@ const Projects = () => {
     },
     {
       image: gymControlImage,
-      title: t("projects_section.projects.1.title"),
-      description: t("projects_section.projects.1.description"),
+      title: t("projects_section.projects.3.title"),
+      description: t("projects_section.projects.3.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
@@ -80,30 +91,6 @@ const Projects = () => {
       ],
       liveUrl: "https://gym-control-ja.netlify.app/",
       githubUrl: "https://github.com/JulianAlvarez07/gym-control",
-    },
-    {
-      image: connect4Image,
-      title: t("projects_section.projects.2.title"),
-      description: t("projects_section.projects.2.description"),
-      technologies: [
-        { name: "React", icon: <SiReact /> },
-        { name: "Tailwind", icon: <SiTailwindcss /> },
-        { name: "Framer Motion", icon: <SiFramer /> },
-      ],
-      liveUrl: "https://connect4-ja.netlify.app/",
-      githubUrl: "https://github.com/JulianAlvarez07/connect-4",
-    },
-    {
-      image: landingPageImage,
-      title: t("projects_section.projects.3.title"),
-      description: t("projects_section.projects.3.description"),
-      technologies: [
-        { name: "React", icon: <SiReact /> },
-        { name: "Tailwind", icon: <SiTailwindcss /> },
-        { name: "Framer Motion", icon: <SiFramer /> },
-      ],
-      liveUrl: "https://landing-ja.netlify.app/",
-      githubUrl: "https://github.com/JulianAlvarez07/landing-page",
     },
   ];
 

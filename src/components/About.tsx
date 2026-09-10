@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import SectionHeading from "./SectionHeading";
 
+type Study = {
+  title: string;
+  institution: string;
+  period: string;
+  meta: string;
+};
+
 const About = () => {
   const { t } = useTranslation();
 
@@ -27,14 +34,6 @@ const About = () => {
   const facts = [
     { label: t("about_section.location_title"), value: t("about_section.location") },
     {
-      label: t("about_section.education_title"),
-      value: t("about_section.education"),
-    },
-    {
-      label: t("about_section.experience_title"),
-      value: t("about_section.experience"),
-    },
-    {
       label: t("about_section.languages_title"),
       value: t("about_section.languages"),
     },
@@ -45,6 +44,9 @@ const About = () => {
       accent: true,
     },
   ];
+
+  const studiesRaw = t("about_section.studies", { returnObjects: true });
+  const studies = Array.isArray(studiesRaw) ? (studiesRaw as Study[]) : [];
 
   return (
     <section id="about" className="scroll-mt-28 px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
@@ -86,6 +88,7 @@ const About = () => {
                 {renderWithHighlights(t("about_section.paragraph1"), [
                   "{degree}",
                   "{university}",
+                  "{licenciatura}",
                 ])}
               </p>
               <p>
@@ -125,6 +128,37 @@ const About = () => {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-16"
+        >
+          <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+            {t("about_section.education_title")}
+          </h3>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {studies.map((study) => (
+              <div
+                key={study.title}
+                className="rounded-3xl border border-border bg-surface p-5 sm:p-6"
+              >
+                <p className="text-base font-semibold tracking-tight text-foreground">
+                  {study.title}
+                </p>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {study.institution}
+                </p>
+                <p className="mt-3 text-sm text-foreground/80">
+                  {study.period}
+                  <span className="text-muted-foreground"> · {study.meta}</span>
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
