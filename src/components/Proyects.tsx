@@ -6,8 +6,10 @@ import {
   SiGnubash,
   SiJavascript,
   SiLeaflet,
+  SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
+  SiPrisma,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -18,6 +20,7 @@ import gymControlImage from "../assets/images/screen-gym.png";
 import antiSocialImage from "../assets/images/screen-antisocial.jpeg";
 import mitoImage from "../assets/images/screen-mito.png";
 import intaImage from "../assets/images/inta-screen.jpeg";
+import soleaImage from "../assets/images/screen-solea.png";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -50,9 +53,25 @@ const Projects = () => {
       featured: true,
     },
     {
-      image: mitoImage,
+      image: soleaImage,
       title: t("projects_section.projects.1.title"),
       description: t("projects_section.projects.1.description"),
+      technologies: [
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "TypeScript", icon: <SiTypescript /> },
+        { name: "Express", icon: <SiExpress /> },
+        { name: "Prisma", icon: <SiPrisma /> },
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "JWT" },
+      ],
+      liveUrl: "https://venta-zapatillas.vercel.app/",
+      githubUrl: "https://github.com/JulianAlvarez07/venta_zapatillas",
+      badge: t("projects_section.badges.personal"),
+    },
+    {
+      image: mitoImage,
+      title: t("projects_section.projects.2.title"),
+      description: t("projects_section.projects.2.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
@@ -65,8 +84,8 @@ const Projects = () => {
     },
     {
       image: antiSocialImage,
-      title: t("projects_section.projects.2.title"),
-      description: t("projects_section.projects.2.description"),
+      title: t("projects_section.projects.3.title"),
+      description: t("projects_section.projects.3.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },
@@ -81,8 +100,8 @@ const Projects = () => {
     },
     {
       image: gymControlImage,
-      title: t("projects_section.projects.3.title"),
-      description: t("projects_section.projects.3.description"),
+      title: t("projects_section.projects.4.title"),
+      description: t("projects_section.projects.4.description"),
       technologies: [
         { name: "React", icon: <SiReact /> },
         { name: "TypeScript", icon: <SiTypescript /> },

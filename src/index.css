@@ -18,7 +18,7 @@ body {
   --text-color: #18181b;
   --border-color: #e4e4e7;
   --hover-color: #d4d4d8;
-  --accent-color: #44403c;
+  --accent-color: #7a1f0d;
   --surface: #ffffff;
   --surface-muted: #eeece7;
   --radius: 0.75rem;
@@ -50,7 +50,7 @@ body {
   --text-color: #f4f4f5;
   --border-color: #27272a;
   --hover-color: #3f3f46;
-  --accent-color: #d6d3d1;
+  --accent-color: #e07a5c;
   --surface: #111113;
   --surface-muted: #18181b;
 }

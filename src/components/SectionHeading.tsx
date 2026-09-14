@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   align?: "left" | "center";
+  descriptionClassName?: string;
 }
 
 const SectionHeading = ({
@@ -12,6 +13,7 @@ const SectionHeading = ({
   title,
   description,
   align = "left",
+  descriptionClassName,
 }: SectionHeadingProps) => {
   const alignment = align === "center" ? "text-center mx-auto" : "";
 
@@ -30,7 +32,11 @@ const SectionHeading = ({
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p
+          className={`mt-4 text-base leading-relaxed sm:text-lg ${
+            descriptionClassName ?? "text-muted-foreground"
+          }`}
+        >
           {description}
         </p>
       )}

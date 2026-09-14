@@ -17,10 +17,26 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import SectionHeading from "./SectionHeading";
+
+const CursorLogo = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width="1em"
+    height="1em"
+    className={className}
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M11.925 24 22.35 18l-10.425-6L1.5 18l10.425 6Z" />
+    <path d="M22.35 18V6L11.925 0v12l10.425 6Z" opacity="0.8" />
+    <path d="M11.925 0 1.5 6v12l10.425-6V0Z" opacity="0.6" />
+    <path d="m22.35 6-10.425 18V12L22.35 6Z" />
+    <path d="m22.35 6-10.425 6L1.5 6h20.85Z" opacity="0.6" />
+  </svg>
+);
 
 const Skills = () => {
   const { t } = useTranslation();
@@ -45,9 +61,13 @@ const Skills = () => {
       { name: "MySQL", icon: SiMysql, color: "text-blue-600" },
     ],
     [t("skills_section.categories.ai")]: [
-      { name: "Cursor", icon: Sparkles, color: "text-teal-500" },
+      { name: "Cursor", icon: CursorLogo, color: "text-foreground" },
       { name: "ChatGPT", icon: SiOpenai, color: "text-foreground" },
-      { name: "GitHub Copilot", icon: SiGithubcopilot, color: "text-foreground" },
+      {
+        name: "GitHub Copilot",
+        icon: SiGithubcopilot,
+        color: "text-foreground",
+      },
     ],
     [t("skills_section.categories.tools")]: [
       { name: "Git", icon: SiGit, color: "text-orange-600" },

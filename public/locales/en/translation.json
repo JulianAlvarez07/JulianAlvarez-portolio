@@ -12,7 +12,7 @@
   "hero": {
     "greeting": "Hi, I'm",
     "role": "Full-Stack Developer",
-    "description": "I build web products end to end: clear interfaces, solid APIs, and an AI-accelerated workflow.",
+    "description": "Full-stack developer with a solid front-end foundation. React, APIs, and data — with AI as support in the workflow.",
     "education_status": "University Technician in Programming, graduated in 2025, and a Bachelor's in Computer Science (4th year) at the National University of Hurlingham.",
     "download_cv": "Download CV",
     "view_projects": "View projects",
@@ -23,18 +23,19 @@
   },
   "about_section": {
     "title": "About me",
-    "subtitle": "Full-stack, UNAHUR graduate, with a professional internship at INTA and a modern AI workflow.",
+    "subtitle": "Full-stack developer with a solid foundation in front-end. I am looking for my first role building products.",
     "greeting": "Hi, I'm Julián",
-    "paragraph1": "I graduated with a {degree} from {university} in 2025. In parallel I'm studying a {licenciatura}, now in the 4th year. I started in 2022, and that's where I built a foundation in both front-end and back-end.",
-    "paragraph2": "Today I work as a {fullstack}: I build interfaces with {react} and also the server, APIs, and databases. I brought {ai} into my daily workflow to ship faster, with more focus.",
-    "paragraph3": "I like solving problems with code and collaborating on products people actually use. I completed a supervised professional internship at INTA, working on the Heat Spot Viewer. I'm looking for my {first_job}.",
+    "paragraph1": "I graduated with a {degree} from {university} in 2025. In parallel I'm studying a {licenciatura}, currently in the 4th year. I started in 2022 and built a solid foundation in both front-end and back-end.",
+    "paragraph2": "University also gave me software engineering practice beyond writing code: teamwork on projects, analysis and design before implementation, and clear technical communication with non-technical people.",
+    "paragraph3": "Today I work as a {fullstack}: interfaces with {react}, and also the server, APIs, and databases. I bring {ai} into the workflow to gain speed and focus, while keeping technical judgment.",
+    "paragraph4": "I like solving problems with software and collaborating on products that are actually in use. I completed a professional internship at INTA on the Heat Spot Viewer. I'm looking for my {first_job}.",
     "degree": "University Technician in Programming",
     "university": "National University of Hurlingham",
     "licenciatura": "Bachelor's in Computer Science",
     "fullstack": "full-stack developer",
     "react": "React",
     "ai": "AI tools",
-    "first_job": "first professional role as a full-stack developer",
+    "first_job": "first role as a full-stack developer",
     "location_title": "Location",
     "location": "Buenos Aires, Argentina",
     "education_title": "Education",
@@ -87,7 +88,8 @@
     "badges": {
       "product": "Real product",
       "client": "Client",
-      "academic": "Academic"
+      "academic": "Academic",
+      "personal": "Personal"
     },
     "project_card": {
       "technologies": "Technologies",
@@ -109,8 +111,12 @@
         ]
       },
       {
-        "title": "Mito",
-        "description": "A site for Mito, a recording-equipment rental studio."
+        "title": "SOLEA",
+        "description": "Full-stack sneaker store: catalog with stock by size, cart, orders, and a dashboard with three roles (admin, seller, customer). Next.js, Express, and PostgreSQL; checkout creates the order."
+      },
+      {
+        "title": "Mito Rental",
+        "description": "Website for Mito Rental, audiovisual equipment hire in Zona Oeste (Ramos Mejía). Interactive catalog, WhatsApp order flow, commercial landing, and legal pages for Argentina."
       },
       {
         "title": "Anti-Social",

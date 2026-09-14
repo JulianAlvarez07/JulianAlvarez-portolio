@@ -55,6 +55,7 @@ const About = () => {
           eyebrow={t("about")}
           title={t("about_section.title")}
           description={t("about_section.subtitle")}
+          descriptionClassName="text-foreground/80"
         />
 
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -83,7 +84,7 @@ const About = () => {
             <h3 className="text-2xl font-semibold tracking-tight text-foreground">
               {t("about_section.greeting")}
             </h3>
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-foreground/85">
               <p>
                 {renderWithHighlights(t("about_section.paragraph1"), [
                   "{degree}",
@@ -91,15 +92,16 @@ const About = () => {
                   "{licenciatura}",
                 ])}
               </p>
+              <p>{t("about_section.paragraph2")}</p>
               <p>
-                {renderWithHighlights(t("about_section.paragraph2"), [
+                {renderWithHighlights(t("about_section.paragraph3"), [
                   "{fullstack}",
                   "{react}",
                   "{ai}",
                 ])}
               </p>
               <p>
-                {renderWithHighlights(t("about_section.paragraph3"), [
+                {renderWithHighlights(t("about_section.paragraph4"), [
                   "{first_job}",
                 ])}
               </p>

@@ -148,33 +148,35 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        <div className="mt-auto flex gap-2 pt-6">
-          {liveUrl && (
-            <Button
-              size="sm"
-              className="flex-1 cursor-pointer bg-foreground text-background hover:bg-foreground/90"
-              onClick={() =>
-                window.open(liveUrl, "_blank", "noopener,noreferrer")
-              }
-            >
-              <ExternalLink className="h-4 w-4" />
-              {t("projects_section.project_card.view_project")}
-            </Button>
-          )}
-          {githubUrl && (
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex-1 cursor-pointer"
-              onClick={() =>
-                window.open(githubUrl, "_blank", "noopener,noreferrer")
-              }
-            >
-              <Github className="h-4 w-4" />
-              {t("projects_section.project_card.github")}
-            </Button>
-          )}
-        </div>
+        {(liveUrl || githubUrl) && (
+          <div className="mt-auto flex gap-2 pt-6">
+            {liveUrl && (
+              <Button
+                size="sm"
+                className="flex-1 cursor-pointer bg-foreground text-background hover:bg-foreground/90"
+                onClick={() =>
+                  window.open(liveUrl, "_blank", "noopener,noreferrer")
+                }
+              >
+                <ExternalLink className="h-4 w-4" />
+                {t("projects_section.project_card.view_project")}
+              </Button>
+            )}
+            {githubUrl && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1 cursor-pointer"
+                onClick={() =>
+                  window.open(githubUrl, "_blank", "noopener,noreferrer")
+                }
+              >
+                <Github className="h-4 w-4" />
+                {t("projects_section.project_card.github")}
+              </Button>
+            )}
+          </div>
+        )}
       </div>
     </article>
   );

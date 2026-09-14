@@ -12,7 +12,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "role": "Desarrollador Full-Stack",
-    "description": "Construyo productos web de punta a punta: interfaces claras, APIs sólidas y un flujo de trabajo acelerado con IA.",
+    "description": "Desarrollador full-stack con base sólida en front-end. React, APIs y datos — con IA como apoyo en el flujo de trabajo.",
     "education_status": "Técnico Universitario en Programación, graduado en 2025, y Licenciatura en Informática (4to año) en la Universidad Nacional de Hurlingham.",
     "download_cv": "Descargar CV",
     "view_projects": "Ver proyectos",
@@ -23,18 +23,19 @@
   },
   "about_section": {
     "title": "Quién soy",
-    "subtitle": "Full-stack, graduado en UNAHUR, con práctica profesional en INTA y un workflow moderno con IA.",
+    "subtitle": "Full-stack con base sólida en front-end. Busco mi primer rol construyendo productos.",
     "greeting": "Hola, soy Julián",
-    "paragraph1": "Me gradué de la {degree} en la {university} en 2025. En paralelo curso la {licenciatura}, ahora en 4to año. Empecé en 2022 y ahí formé base tanto de front-end como de back-end.",
-    "paragraph2": "Hoy me muevo como {fullstack}: construyo interfaces con {react} y también el servidor, las APIs y las bases de datos. Incorporé {ai} al día a día para entregar más rápido, con más foco.",
-    "paragraph3": "Me interesa resolver problemas con código y colaborar en productos que se usen de verdad. Completé una práctica profesional supervisada en INTA, trabajando en el Visor de Focos de Calor. Estoy buscando mi {first_job}.",
+    "paragraph1": "Me gradué de la {degree} en la {university} en 2025. En paralelo curso la {licenciatura}, actualmente en 4to año. Empecé en 2022 y consolidé bases de front-end y back-end.",
+    "paragraph2": "La formación universitaria me aportó, además del código, prácticas de ingeniería de software: trabajo en equipo en proyectos, análisis y diseño antes de implementar, y comunicación técnica clara con perfiles no técnicos.",
+    "paragraph3": "Hoy me desempeño como {fullstack}: interfaces con {react}, y también servidor, APIs y bases de datos. Incorporo {ai} al flujo de trabajo para ganar velocidad y foco, manteniendo el criterio técnico.",
+    "paragraph4": "Me interesa resolver problemas con software y colaborar en productos en uso real. Completé una práctica profesional en INTA en el Visor de Focos de Calor. Busco mi {first_job}.",
     "degree": "Tecnicatura Universitaria en Programación",
     "university": "Universidad Nacional de Hurlingham",
     "licenciatura": "Licenciatura en Informática",
     "fullstack": "desarrollador full-stack",
     "react": "React",
     "ai": "herramientas de IA",
-    "first_job": "primer rol profesional como desarrollador full-stack",
+    "first_job": "primer rol como desarrollador full-stack",
     "location_title": "Ubicación",
     "location": "Buenos Aires, Argentina",
     "education_title": "Formación",
@@ -87,7 +88,8 @@
     "badges": {
       "product": "Producto real",
       "client": "Cliente",
-      "academic": "Académico"
+      "academic": "Académico",
+      "personal": "Personal"
     },
     "project_card": {
       "technologies": "Tecnologías",
@@ -109,8 +111,12 @@
         ]
       },
       {
-        "title": "Mito",
-        "description": "Sitio para Mito, un emprendimiento de alquiler de equipos de grabación."
+        "title": "SOLEA",
+        "description": "Tienda online fullstack de zapatillas: catálogo con stock por talle, carrito, pedidos y panel con tres roles (admin, vendedor, cliente). Next.js, Express y PostgreSQL; el checkout registra el pedido."
+      },
+      {
+        "title": "Mito Rental",
+        "description": "Sitio web de Mito Rental, alquiler de equipos audiovisuales en Zona Oeste (Ramos Mejía). Catálogo interactivo, armado de pedidos por WhatsApp, landing comercial y páginas legales para Argentina."
       },
       {
         "title": "Anti-Social",
